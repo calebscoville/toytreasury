@@ -10,14 +10,15 @@ class RegisterForm extends Component {
             password: '',
             firstname: '',
             lastname: '',
-            email: ''
+            email: '',
+            city: ''
         }
     }
     handleUserRegister = (e) => {
         e.preventDefault()
-        const { firstname, lastname, email, username, password } = this.state
+        const { firstname, lastname, email, username, password, city } = this.state
         axios
-            .post('/auth/register', { firstname, lastname, email, username, password })
+            .post('/auth/register', { firstname, lastname, email, username, password, city })
             .then((res) => {
                 this.props.history.push('/patrondash')
             })
@@ -34,7 +35,8 @@ class RegisterForm extends Component {
             password: '',
             firstname: '',
             lastname: '',
-            email: ''
+            email: '',
+            city: ''
         })
     }
 
@@ -81,6 +83,13 @@ class RegisterForm extends Component {
                         placeholder='password'
                         name='password'
                         value={this.state.password}
+                        onChange={this.handleRegisterInfoUpdate}
+                    />
+                    <input
+                        type='text'
+                        placeholder='city'
+                        name='city'
+                        value={this.state.city}
                         onChange={this.handleRegisterInfoUpdate}
                     />
                     <button onClick={this.handleUserRegister}>Register</button>

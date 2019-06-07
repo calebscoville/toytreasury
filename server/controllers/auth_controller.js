@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs')
 
 module.exports = {
     register: async (req, res) => {
-        const {image, firstname, lastname, email, username, password, city, bio, socialmedia} = req.body
+        const {image, firstname, lastname, email, username, password, city} = req.body
         const db = req.app.get('db')
         const {session} = req
         const userFound = await db.check_user_email({ email })
@@ -17,9 +17,7 @@ module.exports = {
             email,
             username,
             password: hash,
-            city,
-            bio,
-            socialmedia
+            city
         })
 
         session.user = {id: createdUser[0].user_id, username: createdUser[0].username}
@@ -45,7 +43,7 @@ module.exports = {
         const {session} = req
         if(session.user){
             const details = await db.get_user_details({ id: session.user.id })
-            const {image, firstname, lastname, email, username, password, city, bio, socialmedia, user_id} = details[0]
+            const {image, firstname, lastname, email, username, password, city, user_id} = details[0]
             return res
             .status(200)
             .send({
@@ -56,8 +54,6 @@ module.exports = {
                 username,
                 password,
                 city,
-                bio,
-                socialmedia,
                 user_id,
                 username: session.user.username 
             })
