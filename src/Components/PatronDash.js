@@ -1,6 +1,7 @@
 import React from 'react'
 import 'reset-css'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 import {
     AppContainer,
