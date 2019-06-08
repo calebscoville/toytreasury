@@ -20,7 +20,7 @@ class PostForm extends Component {
         axios
             .post('/auth/register', { firstname, lastname, email, username, password, city })
             .then((res) => {
-                this.props.history.push('/patrondash')
+                this.props.history.push('/')
             })
             .catch((err) => {
                 console.log(err)
@@ -99,4 +99,4 @@ class PostForm extends Component {
     }
 }
 
-export default withRouter(RegisterForm)
+export default withRouter(PostForm)

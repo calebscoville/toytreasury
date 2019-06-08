@@ -19,7 +19,7 @@ import {
     <AppContainer>
 
       <FormContainer>
-          <Image> Pic of Cool Robot </Image>
+          <Image> Pic of Cool Phone </Image>
         <FormHeader>
           <FormTitle>STEM Robot Kit</FormTitle>
         </FormHeader>

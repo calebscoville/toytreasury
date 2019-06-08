@@ -9,7 +9,7 @@ import Donate from './Components/Donate'
 import PatronDash from './Components/PatronDash'
 import AdminDash from './Components/AdminDash'
 import BrowseToys from './Components/BrowseToys'
-import PostToy from './Components/PostToy'
+import PostToy from './Components/PostToy/PostToy'
 import ToyInfo from './Components/ToyInfo'
 
 
