@@ -6,19 +6,19 @@ class PostForm extends Component {
     constructor() {
         super()
         this.state = {
-            username: '',
-            password: '',
-            firstname: '',
-            lastname: '',
-            email: '',
-            city: ''
+            title: '',
+            description: '',
+            condition: '',
+            missingpieces: '',
+            extrainfo: '',
+            url: ''
         }
     }
-    handleUserRegister = (e) => {
+    handlePostForm = (e) => {
         e.preventDefault()
-        const { firstname, lastname, email, username, password, city } = this.state
+        const { title, description, condition, missingpieces, extrainfo, url } = this.state
         axios
-            .post('/auth/register', { firstname, lastname, email, username, password, city })
+            .post('/auth/register', { title, description, condition, missingpieces, extrainfo, url })
             .then((res) => {
                 this.props.history.push('/')
             })
@@ -31,16 +31,16 @@ class PostForm extends Component {
         // e.target.password.value = ''
         // e.target.username.value = ''
         this.setState({
-            username: '',
-            password: '',
-            firstname: '',
-            lastname: '',
-            email: '',
-            city: ''
+            title: '',
+            description: '',
+            condition: '',
+            missingpieces: '',
+            extrainfo: '',
+            url: ''
         })
     }
 
-    handleRegisterInfoUpdate = (e) => {
+    handlePostFormInfoUpdate = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -48,51 +48,51 @@ class PostForm extends Component {
     render() {
         return (
             <>
-                <h1>Sign Up</h1>
-                <form onSubmit={this.handleUserRegister}>
+                <h1>Post a Toy</h1>
+                <form onSubmit={this.handlePostForm}>
                     <input
                         type='text'
-                        placeholder='first name'
-                        name='firstname'
-                        value={this.state.firstname}
-                        onChange={this.handleRegisterInfoUpdate}
-                    />
-                    <input
-                        type='text'
-                        placeholder='last name'
-                        name='lastname'
-                        value={this.state.lastname}
-                        onChange={this.handleRegisterInfoUpdate}
+                        placeholder='title'
+                        name='title'
+                        value={this.state.title}
+                        onChange={this.handlePostToyInfoUpdate}
                     />
                     <input
                         type='text'
-                        placeholder='email'
-                        name='email'
-                        value={this.state.email}
-                        onChange={this.handleRegisterInfoUpdate}
+                        placeholder='description'
+                        name='description'
+                        value={this.state.description}
+                        onChange={this.handlePostToyInfoUpdate}
                     />
                     <input
                         type='text'
-                        placeholder='username'
-                        name='username'
-                        value={this.state.username}
-                        onChange={this.handleRegisterInfoUpdate}
-                    />
-                    <input
-                        type='password'
-                        placeholder='password'
-                        name='password'
-                        value={this.state.password}
-                        onChange={this.handleRegisterInfoUpdate}
+                        placeholder='condition'
+                        name='condition'
+                        value={this.state.condition}
+                        onChange={this.handlePostToyInfoUpdate}
                     />
                     <input
                         type='text'
-                        placeholder='city'
-                        name='city'
-                        value={this.state.city}
-                        onChange={this.handleRegisterInfoUpdate}
+                        placeholder='missing pieces'
+                        name='missingpieces'
+                        value={this.state.missingpieces}
+                        onChange={this.handlePostToyInfoUpdate}
                     />
-                    <button onClick={this.handleUserRegister}>Register</button>
+                    <input
+                        type='text'
+                        placeholder='extra information'
+                        name='extrainfo'
+                        value={this.state.extrainfo}
+                        onChange={this.handlePostToyInfoUpdate}
+                    />
+                    <input
+                        type='text'
+                        placeholder='url'
+                        name='url'
+                        value={this.state.url}
+                        onChange={this.handlePostToyInfoUpdate}
+                    />
+                    <button onClick={this.this.handlePostForm}>Post Toy</button>
                 </form>
             </>
         )

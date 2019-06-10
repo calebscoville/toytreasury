@@ -1,5 +1,40 @@
 import React from 'react'
 import 'reset-css'
+import axios from 'axios'
+import { connect } from 'react-redux'
+import PostForm from './PostForm'
+
+class PostToy extends Component {
+  componentDidMount() {
+      axios.get('/auth/user').then((res) => {
+          this.props.updateUser(res.data)
+          this.props.history.push('/details')
+      })
+      this.props.id && this.props.history.push('/details')
+  }
+
+  render() {
+      return (
+          <div>
+              <LoginForm />
+              <RegisterForm />
+          </div>
+      )
+  }
+}
+
+function mapStateToProps(reduxState) {
+  return reduxState
+}
+
+export default connect(
+  mapStateToProps,
+  { updateUser }
+)(Login)
+
+
+
+
 
 import {
     AppContainer,
