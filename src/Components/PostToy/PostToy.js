@@ -28,7 +28,7 @@ function mapStateToProps(reduxState) {
   return reduxState
 }
 
-export default PostToy
+// export default PostToy
 
 export default connect(
   mapStateToProps,

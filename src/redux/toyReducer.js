@@ -24,7 +24,6 @@ export function clearToy(){
 }
 
 function toyReducer (state = initialState, action){
-    console.log(action)
     switch (action.type){
         case UPDATE_TOY:
             const { title, description } = action.payload.toy

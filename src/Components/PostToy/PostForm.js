@@ -18,7 +18,7 @@ class PostForm extends Component {
         e.preventDefault()
         const { title, description, condition, missingpieces, extrainfo, url } = this.state
         axios
-            .post('/auth/register', { title, description, condition, missingpieces, extrainfo, url })
+            .post('/auth/posttoy', { title, description, condition, missingpieces, extrainfo, url })
             .then((res) => {
                 this.props.history.push('/')
             })
