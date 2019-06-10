@@ -26,7 +26,7 @@ export function clearToy(){
 function toyReducer (state = initialState, action){
     switch (action.type){
         case UPDATE_TOY:
-            const { title, description } = action.payload.toy
+            const { title, description } = action.payload
             return { title, description }
             case CLEAR_TOY:
                 return { ...initialState }

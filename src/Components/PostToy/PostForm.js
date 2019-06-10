@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { updateToy} from '../../redux/toyReducer'
+import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 class PostForm extends Component {
@@ -14,22 +16,20 @@ class PostForm extends Component {
             url: ''
         }
     }
-    handlePostForm = (e) => {
+    handleToyPost = (e) => {
         e.preventDefault()
-        const { title, description, condition, missingpieces, extrainfo, url } = this.state
-        axios
-            .post('/auth/posttoy', { title, description, condition, missingpieces, extrainfo, url })
-            .then((res) => {
-                this.props.history.push('/')
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-        // e.target.firstname.value = ''
-        // e.target.lastname.value = ''
-        // e.target.email.value = ''
-        // e.target.password.value = ''
-        // e.target.username.value = ''
+        const toyobj = {
+            title: this.state.title,
+            description: this.state.description,
+            condition: this.state.condition,
+            missingpieces: parseInt(this.state.missingpieces),
+            extrainfo: this.state.extrainfo,
+            url: this.state.url
+            }
+        axios.post('/api/toy', toyobj).then((res) => {
+            this.props.updateToy(res.data)
+            this.props.history.push('/details')
+        })
         this.setState({
             title: '',
             description: '',
@@ -38,6 +38,8 @@ class PostForm extends Component {
             extrainfo: '',
             url: ''
         })
+        this.props.id && this.props.history.push('/details')
+        
     }
 
     handlePostFormInfoUpdate = (e) => {
@@ -49,7 +51,7 @@ class PostForm extends Component {
         return (
             <>
                 <h1>Post a Toy</h1>
-                <form onSubmit={this.handlePostForm}>
+                <form onSubmit={this.handleToyPost}>
                     <input
                         type='text'
                         placeholder='title'
@@ -92,11 +94,20 @@ class PostForm extends Component {
                         value={this.state.url}
                         onChange={this.handlePostFormInfoUpdate}
                     />
-                    <button onClick={this.handlePostForm}>Post Toy</button>
+                    <button onClick={this.handleToyPost}>Post Toy</button>
                 </form>
             </>
         )
     }
 }
 
-export default withRouter(PostForm)
+function mapStateToProps(reduxState) {
+    return reduxState
+  }
+  
+  // export default PostToy
+  
+  export default withRouter (connect(
+    mapStateToProps,
+    { updateToy }
+  )(PostForm))

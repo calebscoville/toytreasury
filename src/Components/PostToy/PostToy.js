@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
 import 'reset-css'
 import axios from 'axios'
-import { updateToy} from '../../redux/toyReducer'
-import { connect } from 'react-redux'
 import PostForm from './PostForm'
 
 class PostToy extends Component {
-  componentDidMount() {
-      axios.get('/auth/posttoy').then((res) => {
-          this.props.updateToy(res.data)
-          this.props.history.push('/details')
-      })
-      this.props.id && this.props.history.push('/details')
-  }
+  
 
   render() {
       return (
@@ -24,16 +16,8 @@ class PostToy extends Component {
   }
 }
 
-function mapStateToProps(reduxState) {
-  return reduxState
-}
 
-// export default PostToy
-
-export default connect(
-  mapStateToProps,
-  { updateToy }
-)(PostToy)
+export default PostToy
 
 // connect(
 //   mapStateToProps,

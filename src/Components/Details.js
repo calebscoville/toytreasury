@@ -39,8 +39,7 @@ class Details extends Component {
 
 function mapStateToProps(reduxState) {
     return {
-        firstname: reduxState.firstname,
-        balance: reduxState.balance
+        firstname: reduxState.firstname
     }
 }
 

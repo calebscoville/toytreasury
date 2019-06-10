@@ -15,6 +15,7 @@ const Navbar = ({ username }) => {
             <Link to='/browsetoys'> Browse All Toys</Link>
             <Link to='/posttoy'> Post Toy </Link>
             <Link to='/toyinfo'> Toy Info </Link>
+            <Link to='/details'> Details </Link>
             <span>{username && username}</span>
         </nav>
     )
