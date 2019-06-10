@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import 'reset-css'
 import axios from 'axios'
 import { connect } from 'react-redux'
@@ -7,7 +7,7 @@ import PostForm from './PostForm'
 class PostToy extends Component {
   componentDidMount() {
       axios.get('/auth/user').then((res) => {
-          this.props.updateUser(res.data)
+          // this.props.updateUser(res.data)
           this.props.history.push('/details')
       })
       this.props.id && this.props.history.push('/details')
@@ -16,8 +16,8 @@ class PostToy extends Component {
   render() {
       return (
           <div>
-              <LoginForm />
-              <RegisterForm />
+              {/* <LoginForm /> */}
+              <PostForm />
           </div>
       )
   }
@@ -27,59 +27,61 @@ function mapStateToProps(reduxState) {
   return reduxState
 }
 
-export default connect(
-  mapStateToProps,
-  { updateUser }
-)(Login)
+export default PostToy
+
+// connect(
+//   mapStateToProps,
+//   { updateUser }
+// )(PostToy)
 
 
 
 
 
-import {
-    AppContainer,
-    FormContainer,
-    FormHeader,
-    FormTitle,
-    FormInput,
-    FormInput2,
-    FormInput3,
-    FormBtn
-  } from './AppStylesPT';
+// import {
+//     AppContainer,
+//     FormContainer,
+//     FormHeader,
+//     FormTitle,
+//     FormInput,
+//     FormInput2,
+//     FormInput3,
+//     FormBtn
+//   } from './AppStylesPT';
 
-  class PostToy extends React.Component {
-    render() {
-    return (
+//   class PostToy extends React.Component {
+//     render() {
+//     return (
             
-    <AppContainer>
-      <FormContainer>
-        <FormHeader>
-          <FormTitle>Add Toy Pictures Here</FormTitle>
-        </FormHeader>
+//     <AppContainer>
+//       <FormContainer>
+//         <FormHeader>
+//           <FormTitle>Add Toy Pictures Here</FormTitle>
+//         </FormHeader>
        
-        <FormBtn> + Click Here to Upload Pictures + </FormBtn>
-        <FormBtn register>Click Here to Add Link</FormBtn>
-      </FormContainer>
+//         <FormBtn> + Click Here to Upload Pictures + </FormBtn>
+//         <FormBtn register>Click Here to Add Link</FormBtn>
+//       </FormContainer>
 
-      <FormContainer>
-        <FormHeader>
-          <FormTitle>Enter Toy Information</FormTitle>
-        </FormHeader>
-        <FormInput title="title" />
-        <FormInput />
-        <FormInput2 con="condition" />
-        <FormInput2 />
-        <FormInput3 add="Addtl. Info" />
-        <FormInput3 />
-        <FormBtn>Post This Toy for the Public!</FormBtn>
-      </FormContainer>
+//       <FormContainer>
+//         <FormHeader>
+//           <FormTitle>Enter Toy Information</FormTitle>
+//         </FormHeader>
+//         <FormInput title="title" />
+//         <FormInput />
+//         <FormInput2 con="condition" />
+//         <FormInput2 />
+//         <FormInput3 add="Addtl. Info" />
+//         <FormInput3 />
+//         <FormBtn>Post This Toy for the Public!</FormBtn>
+//       </FormContainer>
   
-      </AppContainer>
+//       </AppContainer>
   
       
   
-      )
-  }
-  }
+//       )
+//   }
+//   }
 
-export default PostToy
+// export default PostToy

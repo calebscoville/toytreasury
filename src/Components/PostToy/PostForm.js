@@ -92,7 +92,7 @@ class PostForm extends Component {
                         value={this.state.url}
                         onChange={this.handlePostToyInfoUpdate}
                     />
-                    <button onClick={this.this.handlePostForm}>Post Toy</button>
+                    <button onClick={this.handlePostForm}>Post Toy</button>
                 </form>
             </>
         )

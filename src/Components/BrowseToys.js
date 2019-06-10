@@ -5,7 +5,7 @@ import {
     AppContainer,
     FormContainer,
     Image,
-    Image2,
+    // Image2,
     FormHeader,
     FormTitle,
     FormInput,
