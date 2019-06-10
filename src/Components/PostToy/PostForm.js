@@ -55,42 +55,42 @@ class PostForm extends Component {
                         placeholder='title'
                         name='title'
                         value={this.state.title}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <input
                         type='text'
                         placeholder='description'
                         name='description'
                         value={this.state.description}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <input
                         type='text'
                         placeholder='condition'
                         name='condition'
                         value={this.state.condition}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <input
                         type='text'
                         placeholder='missing pieces'
                         name='missingpieces'
                         value={this.state.missingpieces}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <input
                         type='text'
                         placeholder='extra information'
                         name='extrainfo'
                         value={this.state.extrainfo}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <input
                         type='text'
                         placeholder='url'
                         name='url'
                         value={this.state.url}
-                        onChange={this.handlePostToyInfoUpdate}
+                        onChange={this.handlePostFormInfoUpdate}
                     />
                     <button onClick={this.handlePostForm}>Post Toy</button>
                 </form>
