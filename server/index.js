@@ -17,6 +17,8 @@ app.use(session({
     }
 }))
 
+
+
 massive(CONNECTION_STRING).then((database) => {
     app.set('db', database)
     console.log('database set')
