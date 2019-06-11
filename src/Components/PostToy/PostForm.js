@@ -28,7 +28,7 @@ class PostForm extends Component {
             }
         axios.post('/api/toy', toyobj).then((res) => {
             this.props.updateToy(res.data)
-            this.props.history.push('/details')
+            this.props.history.push('/browsetoys')
         })
         this.setState({
             title: '',

@@ -9,7 +9,6 @@ class PostToy extends Component {
   render() {
       return (
           <div>
-              {/* <LoginForm /> */}
               <PostForm />
           </div>
       )
