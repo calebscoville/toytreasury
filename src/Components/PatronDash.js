@@ -16,24 +16,36 @@ import {
   } from './AppStylesPD';
 
   class PatronDash extends React.Component {
+    constructor() {
+      super()
+      this.state={
+        user: {}
+      }
+    }
+
+    componentDidMount() {
+      axios.get("/auth/user")
+      .then(res => {
+        this.setState({
+          user: res.data
+        })
+        console.log(this.state.user)
+      })
+    }
     render() {
+
+
     return (
             
     <AppContainer>
 
       <FormContainer>
-          <Image> Your Hot Pic Here :) </Image>
-        <FormHeader>
-          <FormTitle>Devan SSSS</FormTitle>
-        </FormHeader>
-        <text>Good day to you!</text>
-        <text>Email: devan@devmtn.com</text>
-        <text>City: Logan</text>
-        <text>Checkouts to date: 2</text>
-        <text>ID: 36</text>
-        <text>I like ping-pong, break-dancing and eating candy, especially on the weekend.</text>
-        <FormBtn register>Edit Profile</FormBtn>
+      <PatronDisplay 
+        user={this.state.user}
+          />
       </FormContainer>
+
+      
 
       <FormContainer>
         <FormHeader>
