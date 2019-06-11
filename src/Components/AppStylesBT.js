@@ -35,7 +35,7 @@ export const FormContainer = styled.form`
 `
 export const Image = styled.div`
   width: 95%;
-  height: 65%;
+  height: 45%;
   background: orange;
   display: flex;
   color: black;
