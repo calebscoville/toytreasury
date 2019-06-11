@@ -7,6 +7,7 @@ const express = require('express'),
 const app = express()
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env
 
+
 app.use(express.json())
 app.use(session({
     secret: SESSION_SECRET,
@@ -27,7 +28,7 @@ massive(CONNECTION_STRING).then((database) => {
 
 app.post('/auth/register', auth_ctrl.register)
 app.post('/auth/login', auth_ctrl.login)
-app.post('/api/toy', main_ctrl.posttoy)
+app.post('/api/toy', main_ctrl.addtoy)
 app.get('/auth/details', auth_ctrl.getDetails)
 app.get('/auth/user', auth_ctrl.getUser)
 app.get('/auth/logout', auth_ctrl.logout)
