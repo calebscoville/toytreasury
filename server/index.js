@@ -31,4 +31,5 @@ app.post('/api/toy', main_ctrl.posttoy)
 app.get('/auth/details', auth_ctrl.getDetails)
 app.get('/auth/user', auth_ctrl.getUser)
 app.get('/auth/logout', auth_ctrl.logout)
+app.get('/api/alltoys', main_ctrl.getAllToys)
 
