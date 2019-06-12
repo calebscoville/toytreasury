@@ -1,9 +1,19 @@
 import React from 'react'
+import 'reset-css'
+import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
+import {
+    AppContainer,
+    Image,
+    // Image2,
+    FormBtn
+  } from './AppStylesNav';
+
 const Navbar = ({ username }) => {
     return (
+        // <AppContainer>
         <nav>
             <Link to='/'> Home </Link>
             <Link to='/login'> Login/Sign Up </Link>
@@ -18,6 +28,7 @@ const Navbar = ({ username }) => {
             <Link to='/details'> Details </Link>
             <span>{username && username}</span>
         </nav>
+        // </AppContainer>
     )
 }
 
