@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { withRouter } from 'react-router-dom'
+import {connect} from 'react-redux'
+import {updateUser} from './../../redux/userReducer'
 
 class LoginForm extends Component {
     constructor() {
@@ -10,7 +12,7 @@ class LoginForm extends Component {
             password: ''
         }
     }
-    handleLoginInfoUpdate = (e) => {
+    handleLoginInfoUpdate = async (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -22,6 +24,7 @@ class LoginForm extends Component {
         axios
             .post('/auth/login', { username, password})
             .then((res) => {
+                this.props.updateUser(res.data)
                 this.props.history.push('/patrondash')
             })
         e.target.username.value = ''
@@ -36,12 +39,14 @@ class LoginForm extends Component {
                         type='text'
                         name='username'
                         placeholder='username'
+                        value={this.state.username}
                         onChange={this.handleLoginInfoUpdate}
                         />
                     <input
                         type='password'
                         name='password'
                         placeholder='password'
+                        value={this.state.password}
                         onChange={this.handleLoginInfoUpdate}
                         />
                         <button>Log In</button>
@@ -51,4 +56,55 @@ class LoginForm extends Component {
     }
 }
 
-export default withRouter(LoginForm)
+export default withRouter(connect(null, {updateUser}) (LoginForm))
+
+// class LoginForm extends Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             username: '',
+//             password: ''
+//         }
+//     }
+//     handleLoginInfoUpdate = (e) => {
+//         this.setState({
+//             [e.target.name]: e.target.value
+//         })
+//     }
+
+//     handleUserLogin = (e) => {
+//         e.preventDefault()
+//         const { username, password } = this.state
+//         axios
+//             .post('/auth/login', { username, password})
+//             .then((res) => {
+//                 this.props.history.push('/patrondash')
+//             })
+//         e.target.username.value = ''
+//         e.target.password.value = ''
+//     }
+//     render() {
+//         return (
+//             <>
+//                 <h1>Login</h1>
+//                 <form onSubmit={this.handleUserLogin}>
+//                     <input
+//                         type='text'
+//                         name='username'
+//                         placeholder='username'
+//                         onChange={this.handleLoginInfoUpdate}
+//                         />
+//                     <input
+//                         type='password'
+//                         name='password'
+//                         placeholder='password'
+//                         onChange={this.handleLoginInfoUpdate}
+//                         />
+//                         <button>Log In</button>
+//                 </form>
+//             </>
+//         )
+//     }
+// }
+
+// export default withRouter(LoginForm)
