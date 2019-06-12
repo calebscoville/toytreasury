@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 import {
     AppContainer,
     Image,
-    // Image2,
+    nav,
     FormBtn
   } from './AppStylesNav';
 

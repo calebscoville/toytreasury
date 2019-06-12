@@ -33,4 +33,5 @@ app.get('/auth/details/:id', auth_ctrl.getDetails)
 app.get('/auth/user', auth_ctrl.getUser)
 app.get('/auth/logout', auth_ctrl.logout)
 app.get('/api/alltoys', main_ctrl.getAllToys)
+// app.put('/auth/update', auth_ctrl.update)
 

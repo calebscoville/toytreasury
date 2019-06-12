@@ -25,7 +25,7 @@ class Home extends React.Component {
       </div>
       
 
-      // <Link to='/browsetoys'> <FormBtn register>See More Toys</FormBtn> </Link>
+    // // <Link to='/browsetoys'> <FormBtn register>See More Toys</FormBtn> </Link>
       
     
 

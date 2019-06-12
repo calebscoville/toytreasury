@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 class Carousel1 extends Component {
     render() {
         return (
-            <Carousel interval={3000} transitionTime={700} showStatus={false} showThumbs={false} showArrows={true} dynamicHeight={true} autoPlay infiniteLoop>
+            <Carousel stopOnHove={true} interval={3000} transitionTime={700} showStatus={false} showThumbs={false} showArrows={true} dynamicHeight={true} autoPlay infiniteLoop>
                 <div>
                     <img height="300px" src="https://www.tozore.com/images/tozore/k/syl12785.jpg" />
                     <p className="legend">Criss Cross Crash</p>
