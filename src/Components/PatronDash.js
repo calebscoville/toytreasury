@@ -26,7 +26,7 @@ import {
     }
 
     componentDidMount() {
-      axios.get("/auth/details")
+      axios.get(`/auth/details/${this.props.user.id}`)
       .then(res => {
         this.setState({
           user: res.data
@@ -43,7 +43,7 @@ import {
       }
 
     render() {
-
+      console.log(this.props)
 
     return (
             
@@ -92,9 +92,15 @@ import {
   }
 }
 
+const mapStateToProps = (reduxState) => {
+  return {
+    user: reduxState.user
+  }
+}
+
 const mapDispatchToProps = {
 	updateUser,
 	clearUser
 }
 
-export default PatronDash
+export default connect (mapStateToProps, mapDispatchToProps) (PatronDash)

@@ -6,7 +6,7 @@ module.exports = {
         const db = req.app.get('db')
         const {session} = req
         const userFound = await db.check_user_email({ email })
-        console.log(userFound[0])
+        // console.log(userFound[0])
         if(userFound[0]) return res.status(409).send('Email already exists')
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
@@ -41,8 +41,10 @@ module.exports = {
     getDetails: async (req, res) => {
         const db = req.app.get('db')
         const {session} = req
+        const {id} = req.params
         if(session.user){
-            const details = await db.get_user_details({ id: session.user.id })
+            const details = await db.get_user_details(id)
+            console.log(details)
             const {image, firstname, lastname, email, username, password, city, user_id} = details[0]
             return res
             .status(200)

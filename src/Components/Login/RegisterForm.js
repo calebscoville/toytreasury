@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { withRouter } from 'react-router-dom'
+import {connect} from 'react-redux'
+import {updateUser} from './../../redux/userReducer'
 
 class RegisterForm extends Component {
     constructor() {
@@ -14,12 +16,13 @@ class RegisterForm extends Component {
             city: ''
         }
     }
-    handleUserRegister = (e) => {
+    handleUserRegister = async (e) => {
         e.preventDefault()
         const { firstname, lastname, email, username, password, city } = this.state
-        axios
+        await axios
             .post('/auth/register', { firstname, lastname, email, username, password, city })
             .then((res) => {
+                this.props.updateUser(res.data)
                 this.props.history.push('/patrondash')
             })
             .catch((err) => {
@@ -99,4 +102,6 @@ class RegisterForm extends Component {
     }
 }
 
-export default withRouter(RegisterForm)
+
+
+export default withRouter(connect(null, {updateUser}) (RegisterForm))
