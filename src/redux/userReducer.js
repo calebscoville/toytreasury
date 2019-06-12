@@ -28,7 +28,7 @@ function reducer(state = initialState, action){
     switch (action.type){
         case UPDATE_USER:
             const { username, firstname } = action.payload
-            return {...state, username, firstname }
+            return { username, firstname }
             case CLEAR_USER:
                 return { ...initialState }
                 default:

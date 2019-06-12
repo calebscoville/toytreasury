@@ -1,4 +1,7 @@
 import styled, { keyframes } from 'styled-components';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 
 // Animations
 const glow = keyframes`
@@ -16,55 +19,64 @@ export const AppContainer = styled.div`
   height: 100vh;
   background: #282a36;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
-
-export const FormContainer = styled.form`
-  width: 90%;
-  height: 80%;
-  background: #44475a;
-  border: 2px solid #6272a4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-`
-export const FormContainer2 = styled.form`
-  width: 90%;
-  height: 80%;
-  background: white;
-  border: 2px solid #6272a4;
+export const Carousel = styled.div`
+width: 90vw;
+  height: 90vh;
+  background: #282a36;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 `
 
-export const FormHeader = styled.div`
-  width: 80%;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-`
+// export const FormContainer = styled.form`
+//   width: 90%;
+//   height: 80%;
+//   background: #44475a;
+//   border: 2px solid #6272a4;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// `
+// export const FormContainer2 = styled.form`
+//   width: 90%;
+//   height: 80%;
+//   background: white;
+//   border: 2px solid #6272a4;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// `
 
-export const FormTitle = styled.h1`
-  font-size: 24px;
-  color: #50fa7b;
-`
+// export const FormHeader = styled.div`
+//   width: 80%;
+//   height: 10%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// `
 
-export const FormInput = styled.input.attrs({
-  placeholder: props => props.email ? 'email' : 'password',
-  type: props => props.email ? 'email' : 'password'
-})`
-  width: 80%;
-  height: 10%;
-  outline: none;
-`
+// export const FormTitle = styled.h1`
+//   font-size: 24px;
+//   color: #50fa7b;
+// `
+
+// export const FormInput = styled.input.attrs({
+//   placeholder: props => props.email ? 'email' : 'password',
+//   type: props => props.email ? 'email' : 'password'
+// })`
+//   width: 80%;
+//   height: 10%;
+//   outline: none;
+// `
 
 export const FormBtn = styled.button`
   width: 15vw;

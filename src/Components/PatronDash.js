@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 import 'reset-css'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import { updateUser, clearUser } from '../redux/userReducer'
 import PatronDisplay from './PatronDisplay'
+import { connect } from 'react-redux'
 
 import {
     AppContainer,
@@ -66,12 +68,12 @@ import {
         <FormBtn register>Messages</FormBtn>
         <Link to='/donate'> <FormBtn>Donate to the cause of toys!</FormBtn> </Link>
         
-        <FormBtn register></FormBtn>
+        {/* <FormBtn register></FormBtn> */}
         <FormBtn onClick={this.handleUserLogout}>Logout</FormBtn>
 
       </FormContainer>
 
-      <FormContainer>
+      {/* <FormContainer>
         <FormHeader>
           <FormTitle>Your History</FormTitle>
         </FormHeader>
@@ -81,13 +83,18 @@ import {
         <FormBtn>See This Toy</FormBtn>
 
       </FormContainer>
-  
+   */}
       </AppContainer>
   
       
   
       )
   }
+}
+
+const mapDispatchToProps = {
+	updateUser,
+	clearUser
 }
 
 export default PatronDash
