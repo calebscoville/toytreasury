@@ -24,7 +24,7 @@ import {
     }
 
     componentDidMount() {
-      axios.get("/auth/user")
+      axios.get("/auth/details")
       .then(res => {
         this.setState({
           user: res.data
@@ -32,6 +32,14 @@ import {
         console.log(this.state.user)
       })
     }
+
+    handleUserLogout = () => {
+      axios.get('/auth/logout').then((res) => {
+        this.props.clearUser()
+        this.props.history.push('/')
+      })
+      }
+
     render() {
 
 
@@ -59,6 +67,7 @@ import {
         <Link to='/donate'> <FormBtn>Donate to the cause of toys!</FormBtn> </Link>
         
         <FormBtn register></FormBtn>
+        <FormBtn onClick={this.handleUserLogout}>Logout</FormBtn>
 
       </FormContainer>
 
