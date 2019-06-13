@@ -5,10 +5,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import {
-    AppContainer,
-    Image,
-    nav,
-    FormBtn
+    nav
   } from './AppStylesNav';
 
 const Navbar = ({ username }) => {

@@ -79,6 +79,18 @@ module.exports = {
         res.sendStatus(200)
     }
 
+    edit: ( req, res, next ) => {
+        const db = req.app.get('db');
+        const { params, query } = req;
+
+        db.edit_user([params.id, query.desc])
+        .then(() => res.sendStatus(200))
+        .catch(err => {
+            res.status(500).send({ errorMessage: "Oh no! But it's okay, we're on it like butter on a banana!"})
+            console.log(err)
+        })
+    }
+
     // update: (req, res) => {
     //     let index = null;
     // books.forEach((book, i) => {
