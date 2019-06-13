@@ -14,7 +14,7 @@ const glow = keyframes`
 export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: #282a36;
+  background: #a9eec2;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -25,7 +25,7 @@ export const AppContainer = styled.div`
 export const FormContainer = styled.form`
   width: 30%;
   height: 60%;
-  background: #44475a;
+  background: #fad284;
   border: 2px solid #6272a4;
   display: flex;
   flex-direction: column;
@@ -65,8 +65,8 @@ export const FormHeader = styled.div`
 `
 
 export const FormTitle = styled.h1`
-  font-size: 24px;
-  color: #50fa7b;
+  font-size: 18px;
+  color: #705772;
 `
 export const FormInput = styled.input.attrs({
     placeholder: props => props.title ? 'Title' : 'Description',
@@ -104,6 +104,18 @@ export const FormBtn = styled.button`
   border: none;
   &:hover {
     background: ${props => props.register ? '#ff79c6' : '#ffb86c'};
+    cursor: pointer;
+  }
+`
+
+export const EditBtn = styled.button`
+  width: 15vw;
+  height: 7vh;
+  background: ${props => props.register ? '#f38181' : '#705772'};
+  color: #6272a4;
+  border: none;
+  &:hover {
+    background: ${props => props.register ? '#705772' : '#f38181'};
     cursor: pointer;
   }
 `

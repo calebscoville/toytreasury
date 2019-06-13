@@ -11,7 +11,7 @@ import {
 const Navbar = ({ username }) => {
     return (
         // <AppContainer>
-        <nav>
+        <div>
             <Link to='/'> Home </Link>
             <Link to='/login'> Login/Sign Up </Link>
             <Link to='/howitworks'> How It Works </Link>
@@ -24,7 +24,7 @@ const Navbar = ({ username }) => {
             <Link to='/toyinfo'> Toy Info </Link>
             <Link to='/details'> Details </Link>
             <span>{username && username}</span>
-        </nav>
+        </div>
         // </AppContainer>
     )
 }

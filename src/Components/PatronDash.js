@@ -14,7 +14,8 @@ import {
     FormHeader,
     FormTitle,
     FormInput,
-    FormBtn
+    FormBtn,
+    EditBtn
   } from './AppStylesPD';
 
   class PatronDash extends React.Component {
@@ -66,7 +67,7 @@ import {
 
       <FormContainer>
         <FormHeader>
-          <FormTitle>What would you like to do rn?</FormTitle>
+          <FormTitle>What would you like to do right now?</FormTitle>
         </FormHeader>
         <Link to='/browsetoys'>
           <FormBtn>See All Toys</FormBtn> 

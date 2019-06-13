@@ -34,16 +34,16 @@ export const AppContainer = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 
-// export const FormContainer = styled.form`
-//   width: 30%;
-//   height: 60%;
-//   background: #44475a;
-//   border: 2px solid #6272a4;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   align-items: center;
-// `
+export const FormContainer = styled.form`
+  width: 30%;
+  height: 60%;
+  background: #44475a;
+  border: 2px solid #6272a4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`
 // export const Image = styled.div`
 //   width: 95%;
 //   height: 45%;

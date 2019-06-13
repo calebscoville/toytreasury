@@ -9,8 +9,9 @@ import {
     FormHeader,
     FormTitle,
     FormInput,
-    FormBtn
-  } from './AppStylesBT';
+    FormBtn,
+    EditBtn
+  } from './AppStylesPD';
 
   class PatronDisplay extends React.Component {
     render() {
@@ -27,7 +28,7 @@ import {
         </FormHeader>
 
         <Link to='/edituser'>
-        <FormBtn register>Edit</FormBtn>
+        <EditBtn register>Edit</EditBtn>
         </Link>
 
       </FormContainer>
