@@ -18,22 +18,22 @@ import {
   } from './AppStylesPD';
 
   class PatronDash extends React.Component {
-    constructor() {
-      super()
-      this.state={
-        user: {}
-      }
-    }
+    // constructor() {
+    //   super()
+    //   this.state={
+    //     user: {}
+    //   }
+    // }
 
-    componentDidMount() {
-      axios.get(`/auth/details/${this.props.user.id}`)
-      .then(res => {
-        this.setState({
-          user: res.data
-        })
-        console.log(this.state.user)
-      })
-    }
+    // componentDidMount = async () => {
+    //   await axios.get(`/auth/details/${this.props.user.user_id}`)
+    //   .then(res => {
+    //     this.setState({
+    //       user: res.data
+    //     })
+    //     console.log(this.state.user)
+    //   })
+    // }
 
     handleUserLogout = () => {
       axios.get('/auth/logout').then((res) => {
@@ -51,7 +51,7 @@ import {
 
       <FormContainer>
       <PatronDisplay 
-        user={this.state.user}
+        user={this.props.user}
           />
       </FormContainer>
 
@@ -72,18 +72,6 @@ import {
         <FormBtn onClick={this.handleUserLogout}>Logout</FormBtn>
 
       </FormContainer>
-
-      {/* <FormContainer>
-        <FormHeader>
-          <FormTitle>Your History</FormTitle>
-        </FormHeader>
-        <Image2> Chutes and Ladders </Image2>
-        <FormBtn>See This Toy</FormBtn>
-        <Image2> Basic Blocks </Image2>
-        <FormBtn>See This Toy</FormBtn>
-
-      </FormContainer>
-   */}
       </AppContainer>
   
       

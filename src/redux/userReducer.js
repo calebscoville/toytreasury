@@ -1,11 +1,11 @@
 const initialState = {
     username: '',
-    firstname: '',
-    lastname: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     city: '',
-    id: null
+    user_id: null
 }
 
 const UPDATE_USER = 'UPDATE_USER'
@@ -27,12 +27,24 @@ export function clearUser(){
 function reducer(state = initialState, action){
     switch (action.type){
         case UPDATE_USER:
-            const { username, firstname, id } = action.payload
-            return { username, firstname, id }
+            const { username, first_name, last_name, email, city, user_id } = action.payload
+            return { username, first_name, last_name, email, city, user_id }
             case CLEAR_USER:
                 return { ...initialState }
                 default:
                     return state
     }
 }
+
+// function userReducer (state = initialState, action){
+//     switch (action.type){
+//         case UPDATE_USER:
+//             const { firstname, description } = action.payload
+//             return { ...state, title, description }
+//             case CLEAR_TOY:
+//                 return { ...initialState }
+//                 default:
+//                     return state
+//     }
+// }
 export default reducer

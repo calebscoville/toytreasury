@@ -11,6 +11,7 @@ import AdminDash from './Components/AdminDash'
 import BrowseToys from './Components/BrowseToys'
 import PostToy from './Components/PostToy/PostToy'
 import ToyInfo from './Components/ToyInfo'
+import EditUser from './Components/EditUser'
 
 
 export default (
@@ -26,6 +27,6 @@ export default (
         <Route path='/browsetoys' component={BrowseToys} />
         <Route path='/posttoy' component={PostToy} />
         <Route path='/toyinfo' component={ToyInfo} />
-        
+        <Route path='/edituser' component={EditUser} />
     </Switch>
 )
