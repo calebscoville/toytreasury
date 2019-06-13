@@ -43,9 +43,9 @@ import {
       }
 
       handleUserDelete = () => {
-        axios.get('/auth/delete').then((res) =>{
-          this.props.clearUser()
-          this.props.history.delete('/')
+        console.log(this.props)
+        axios.delete(`/auth/delete/${this.props.user.user_id}`).then((res) =>{
+          this.props.history.push('/')
         })
       }
 

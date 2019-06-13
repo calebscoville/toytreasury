@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import stripe from './stripeKey';
+// import stripe from './stripeKey';
 
 export const Donate = () => {
     return (

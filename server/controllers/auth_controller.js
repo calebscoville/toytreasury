@@ -106,7 +106,7 @@ module.exports = {
         const db = req.app.get('db');
         const { id } = req.params;
     
-        db.delete_user(id)
+        db.delete_user({id})
           .then(() => res.sendStatus(200))
           .catch(err => {
         res.status(500).send({ errorMessage: "My Gosh! We'll get someone working on that in 0.0023 seconds or less!" });
