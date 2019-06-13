@@ -10,6 +10,7 @@ const initialState = {
 
 const UPDATE_USER = 'UPDATE_USER'
 const CLEAR_USER = 'CLEAR_USER'
+const DELETE_USER = 'DELETE_USER'
 
 export function updateUser(user){
     return {
@@ -24,6 +25,13 @@ export function clearUser(){
     }
 }
 
+export function deleteUser(user){
+    return {
+        type: DELETE_USER,
+        payload: user
+    }
+}
+
 function reducer(state = initialState, action){
     switch (action.type){
         case UPDATE_USER:
@@ -33,6 +41,8 @@ function reducer(state = initialState, action){
                 return { ...initialState }
                 default:
                     return state
+                    case DELETE_USER:
+                        // WHAT GOES HERE!!!!!
     }
 }
 

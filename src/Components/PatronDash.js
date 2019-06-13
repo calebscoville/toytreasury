@@ -42,6 +42,13 @@ import {
       })
       }
 
+      handleUserDelete = () => {
+        axios.get('/auth/delete').then((res) =>{
+          this.props.clearUser()
+          this.props.history.delete('/')
+        })
+      }
+
     render() {
       console.log(this.props)
 
@@ -65,11 +72,12 @@ import {
           <FormBtn>See All Toys</FormBtn> 
         </Link>
         
-        <FormBtn register>Messages</FormBtn>
-        <Link to='/donate'> <FormBtn>Donate to the cause of toys!</FormBtn> </Link>
+        <Link to='/donate'> <FormBtn register>Donate to the cause of toys!</FormBtn> </Link>
         
         {/* <FormBtn register></FormBtn> */}
         <FormBtn onClick={this.handleUserLogout}>Logout</FormBtn>
+
+        <FormBtn onClick={this.handleUserDelete} register>Delete My Account</FormBtn>
 
       </FormContainer>
       </AppContainer>

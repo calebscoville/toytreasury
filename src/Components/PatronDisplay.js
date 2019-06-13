@@ -25,9 +25,11 @@ import {
           <text>{this.props.user.city}</text>
           <text>{this.props.user.email}</text>
         </FormHeader>
+
         <Link to='/edituser'>
         <FormBtn register>Edit</FormBtn>
         </Link>
+
       </FormContainer>
   
       
