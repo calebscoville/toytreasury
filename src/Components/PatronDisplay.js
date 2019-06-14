@@ -1,6 +1,7 @@
 import React from 'react'
 import 'reset-css'
 import {Link} from 'react-router-dom'
+import "./patronDisplay.css"
 
 import {
     AppContainer,
@@ -18,7 +19,9 @@ import {
       console.log(this.props.user)
     return (
 
+      
       <FormContainer>
+        <body className="image"></body>
         <FormHeader>
           <FormTitle>{this.props.user.first_name}</FormTitle>
           <text>{this.props.user.last_name}</text>
@@ -30,7 +33,7 @@ import {
         <Link to='/edituser'>
         <EditBtn register>Edit</EditBtn>
         </Link>
-
+      
       </FormContainer>
   
       

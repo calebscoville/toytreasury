@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+// const Container = styled.div`
+// background-image: `url(${props => props.imgObj.url})`
+// `;
+
 // Animations
 const glow = keyframes`
   50% {
