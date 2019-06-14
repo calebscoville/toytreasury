@@ -43,6 +43,7 @@ app.get('/auth/logout', auth_ctrl.logout)
 app.get('/api/alltoys', main_ctrl.getAllToys)
 app.put('/auth/edit/:id', auth_ctrl.edit)
 app.delete('/auth/delete/:id', auth_ctrl.delete)
+// app.get('/auth/join/:id' auth_ctrl.join)
 // app.put('/auth/update', auth_ctrl.update)
 
 app.post('/api/payment', function(req, res, next){

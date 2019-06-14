@@ -69,6 +69,7 @@ import {
         <FormHeader>
           <FormTitle>What would you like to do right now?</FormTitle>
         </FormHeader>
+        <Link to='/posttoy'> <FormBtn register>Post a Toy</FormBtn> </Link>
         <Link to='/browsetoys'>
           <FormBtn>See All Toys</FormBtn> 
         </Link>

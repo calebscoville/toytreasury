@@ -18,7 +18,7 @@ const Navbar = ({ username }) => {
             <Link to='/about'> About </Link>
             <Link to='/donate'> Donate </Link>
             <Link to='/patrondash'> PatronDash </Link>
-            <Link to='/admindash'> AdminDash </Link>
+            {/* <Link to='/admindash'> AdminDash </Link> */}
             <Link to='/browsetoys'> Browse All Toys</Link>
             <Link to='/posttoy'> Post Toy </Link>
             <Link to='/toyinfo'> Toy Info </Link>

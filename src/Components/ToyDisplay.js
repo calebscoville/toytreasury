@@ -16,7 +16,7 @@ import {
     return (
 
       <FormContainer>
-          <Image > {this.props.imageUrl} </Image>
+          <Image > <img src={this.props.imageUrl}/> </Image>
         <FormHeader>
           <FormTitle>{this.props.title}</FormTitle>
           <text>{this.props.description}</text>
