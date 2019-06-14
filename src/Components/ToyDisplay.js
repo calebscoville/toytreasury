@@ -1,6 +1,6 @@
 import React from 'react'
 import 'reset-css'
-
+import axios from 'axios'
 import {
     AppContainer,
     FormContainer,
@@ -12,6 +12,12 @@ import {
   } from './AppStylesBT';
 
   class BrowseToys extends React.Component {
+    componentDidMount = () => {
+        axios.get(`/auth/gettoyanduser/${this.props.toyId}`)
+        .then(res => {
+          console.log('res.data :', res.data); 
+        })
+    }
     render() {
     return (
 

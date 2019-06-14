@@ -112,6 +112,21 @@ module.exports = {
         res.status(500).send({ errorMessage: "My Gosh! We'll get someone working on that in 0.0023 seconds or less!" });
             console.log(err)
           });
+      },
+
+      getToyAndUser: async (req, res, next) => {
+        const db = req.app.get('db');
+        const id = parseInt(req.params.id);
+        const data = await db.user_toy_join({toyId: id})
+          .then(() => {
+              res.status(200).send(res[0])
+              console.log('data :', data);
+            })
+          .catch(err => {
+            res.status(500).send({ errorMessage: "My Gosh! We'll help." });
+            console.log(err)
+          });
+          console.log('data :', data);
       }
       
     };

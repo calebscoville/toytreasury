@@ -1,4 +1,4 @@
-select toy_info.title
-from users join toy_info
+select *
+from toy_info join users
 on users.user_id = toy_info.user_id
-where users.user_id = ${user_id}
+where toy_info.id = ${toyId}

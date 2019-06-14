@@ -36,6 +36,7 @@ import {
       const displayToys = this.state.alltoys.map((element, index) => {
         return(
           <ToyDisplay 
+            toyId={element.id}
             title={element.title} 
             description={element.description} 
             condition={element.condition}
