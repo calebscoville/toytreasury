@@ -5,6 +5,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import '../App.css';
 
+
 class Donate extends Component {
     onToken = (token) => {
       token.card = void 0;

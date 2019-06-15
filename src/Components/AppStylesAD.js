@@ -14,7 +14,7 @@ const glow = keyframes`
 export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: #282a36;
+  background: #f2eee0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -25,8 +25,8 @@ export const AppContainer = styled.div`
 export const FormContainer = styled.form`
   width: 30%;
   height: 60%;
-  background: #44475a;
-  border: 2px solid #6272a4;
+  background: #c8e6f5;
+  border: 2px solid #5ca0d3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -88,11 +88,11 @@ export const FormInput = styled.input.attrs({
 export const FormBtn = styled.button`
   width: 15vw;
   height: 7vh;
-  background: ${props => props.register ? '#bd93f9' : '#f1fa8c'};
+  background: ${props => props.register ? '#FFD700' : '#FFD700'};
   color: #6272a4;
   border: none;
   &:hover {
-    background: ${props => props.register ? '#ff79c6' : '#ffb86c'};
+    background: ${props => props.register ? '#f2eee0' : '#f2eee0'};
     cursor: pointer;
   }
 `

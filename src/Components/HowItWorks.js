@@ -1,10 +1,24 @@
 import React from 'react'
+import 'reset-css'
+import {Link} from 'react-router-dom'
 
-const HowItWorks = () => {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn
+  } from './AppStylesAD';
+
+  class HowItWorks extends React.Component {
+    render() {
     return (
+        <AppContainer>
         <div>
             <h1>How It Works</h1>
-            
+            <FormContainer>
             <text>
                 Okay Beautiful Human, here's how it works:
 
@@ -18,11 +32,11 @@ const HowItWorks = () => {
 
                 You can check out one game at a time as you get the hang of it, then after three months and responsible behavior, you can then check out two games at a time.
             </text>
-    
+            </FormContainer>
         </div>
-        
+        </AppContainer>
     
         )
 }
-
+  }
 export default HowItWorks

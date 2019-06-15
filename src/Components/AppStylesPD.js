@@ -18,7 +18,7 @@ const glow = keyframes`
 export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: #a9eec2;
+  background: #f2eee0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -29,8 +29,8 @@ export const AppContainer = styled.div`
 export const FormContainer = styled.form`
   width: 30%;
   height: 60%;
-  background: #fad284;
-  border: 2px solid #6272a4;
+  background: #c8e6f5;
+  border: 2px solid #5ca0d3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -70,7 +70,7 @@ export const FormHeader = styled.div`
 
 export const FormTitle = styled.h1`
   font-size: 18px;
-  color: #705772;
+  color: #5e0a0a;
 `
 export const FormInput = styled.input.attrs({
     placeholder: props => props.title ? 'Title' : 'Description',
@@ -103,11 +103,11 @@ export const FormInput = styled.input.attrs({
 export const FormBtn = styled.button`
   width: 15vw;
   height: 7vh;
-  background: ${props => props.register ? '#bd93f9' : '#f1fa8c'};
-  color: #6272a4;
+  background: ${props => props.register ? '#FFD700' : '#FFD700'};
+  color: #5e0a0a;
   border: none;
   &:hover {
-    background: ${props => props.register ? '#ff79c6' : '#ffb86c'};
+    background: ${props => props.register ? '#f2eee0' : '#f2eee0'};
     cursor: pointer;
   }
 `
@@ -115,11 +115,11 @@ export const FormBtn = styled.button`
 export const EditBtn = styled.button`
   width: 15vw;
   height: 7vh;
-  background: ${props => props.register ? '#f38181' : '#705772'};
-  color: #6272a4;
+  background: ${props => props.register ? '#FFD700' : 'f2eee0'};
+  color: #5e0a0a;
   border: none;
   &:hover {
-    background: ${props => props.register ? '#705772' : '#f38181'};
+    background: ${props => props.register ? 'white' : 'f2eee0'};
     cursor: pointer;
   }
 `
@@ -127,7 +127,7 @@ export const EditBtn = styled.button`
 export const ThemeSwitcherBtn = styled.button`
   width: 25%;
   height: 10%;
-  background: ${props => props.register ? 'pink' : 'aquamarine'};
+  background: ${props => props.register ? 'white' : 'white'};
   color: white;
   border: none;
 `

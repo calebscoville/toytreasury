@@ -51,6 +51,6 @@ import {
   
       )
   }
-  }
+}
 
 export default AdminDash
