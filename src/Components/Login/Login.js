@@ -29,10 +29,8 @@ class Login extends React.Component {
     render() {
         return (
             <AppContainer>
-            <div>
                 <LoginForm />
                 <RegisterForm />
-            </div>
             </AppContainer>
         )
     }

@@ -17,8 +17,8 @@ class Carousel1 extends Component {
                     <p className="legend">Learning Toys</p>
                 </div>
                 <div>
-                    <img height="200px" src="https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" />
-                    <p className="legend">Legos (Assorted)</p>
+                    <img height="200px" src="https://images.pexels.com/photos/1249159/pexels-photo-1249159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                    <p className="legend">Mini Animals</p>
                 </div>
                 <div>
                     <img height="200px" src="https://images.unsplash.com/photo-1550432163-9cb326104944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />

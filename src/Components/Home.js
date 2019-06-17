@@ -11,7 +11,8 @@ import {
     // FormHeader,
     // FormTitle,
     // FormInput,
-    FormBtn
+    FormBtn,
+    Title
   } from './AppStylesHome';
 
 class Home extends React.Component {
@@ -20,6 +21,7 @@ class Home extends React.Component {
       
 
     <AppContainer>
+      <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>The Toy Treasury</Title>
     <div className="home-carousel">
       <Carousel />
       </div>

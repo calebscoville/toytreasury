@@ -3,8 +3,20 @@ import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {updateUser} from './../../redux/userReducer'
+import 'reset-css'
+import {Link} from 'react-router-dom'
 
-class RegisterForm extends Component {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn
+  } from '../AppStylesMany';
+
+class RegisterForm extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -51,6 +63,8 @@ class RegisterForm extends Component {
     render() {
         return (
             <>
+            {/* <AppContainer> */}
+                <FormContainer>
                 <h1>Sign Up</h1>
                 <form onSubmit={this.handleUserRegister}>
                     <input
@@ -97,6 +111,8 @@ class RegisterForm extends Component {
                     />
                     <button onClick={this.handleUserRegister}>Register</button>
                 </form>
+                </FormContainer>
+                {/* </AppContainer> */}
             </>
         )
     }

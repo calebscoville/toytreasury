@@ -65,7 +65,7 @@ class PostForm extends React.Component {
     render() {
         console.log(this.props.user)
         return (
-            // <AppContainer>
+            <FormContainer>
             <>
                 <h1>Post a Toy</h1>
                 {/* <Input> */}
@@ -116,7 +116,7 @@ class PostForm extends React.Component {
                     <button onClick={this.handleToyPost}>Post Toy</button>
                 </form>
             </>
-            // </AppContainer>
+            </FormContainer>
         )
     }
 }

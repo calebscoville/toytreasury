@@ -20,7 +20,6 @@ export const AppContainer = styled.div`
   background: #f2eee0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
@@ -32,6 +31,12 @@ width: 90vw;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+`
+
+export const Title = styled.text`
+font-size: 45px;
+margin: 5px;
+font-family: cursive;
 `
 
 // export const FormContainer = styled.form`

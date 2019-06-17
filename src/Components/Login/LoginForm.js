@@ -46,7 +46,8 @@ class LoginForm extends React.Component {
         return (
             
             <>
-            <AppContainer>
+            {/* <AppContainer> */}
+                <FormContainer>
                 <h1>Login</h1>
                 <form onSubmit={this.handleUserLogin}>
                     <input
@@ -65,7 +66,8 @@ class LoginForm extends React.Component {
                         />
                         <button>Log In</button>
                 </form>
-                </AppContainer>
+                </FormContainer>
+                {/* </AppContainer> */}
             </>
             
         )
