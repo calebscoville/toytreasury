@@ -7,22 +7,23 @@ import {connect} from 'react-redux'
 import {
     nav,
     AppContainer,
-    FormContainer
+    FormContainer,
+    Span
   } from './AppStylesNav';
 
 const Navbar = ({ username }) => {
     return (
         <AppContainer>
         <div>
-            <Link to='/'> Home </Link>
-            <Link to='/login'> Login/Sign Up </Link>
-            <Link to='/howitworks'> How It Works </Link>
-            <Link to='/about'> About </Link>
-            <Link to='/donate'> Donate </Link>
-            <Link to='/patrondash'> PatronDash </Link>
+            <Span><Link to='/' style={{ textDecoration: 'none' }}> Home </Link></Span>
+            <Span><Link to='/login' style={{ textDecoration: 'none' }}> Login/Sign Up </Link></Span>
+            <Span><Link to='/howitworks' style={{ textDecoration: 'none' }}> How It Works </Link></Span>
+            <Span><Link to='/about' style={{ textDecoration: 'none' }}> About </Link></Span>
+            <Span><Link to='/donate' style={{ textDecoration: 'none' }}> Donate </Link></Span>
+            <Span><Link to='/patrondash' style={{ textDecoration: 'none' }}> PatronDash </Link></Span>
             {/* <Link to='/admindash'> AdminDash </Link> */}
-            <Link to='/browsetoys'> Browse All Toys</Link>
-            <Link to='/posttoy'> Post Toy </Link>
+            <Span><Link to='/browsetoys' style={{ textDecoration: 'none' }}> Browse All Toys</Link></Span>
+            <Span><Link to='/posttoy' style={{ textDecoration: 'none' }}> Post Toy </Link></Span>
             {/* <Link to='/toyinfo'> Toy Info </Link> */}
             {/* <Link to='/details'> Details </Link> */}
             <span>{username && username}</span>

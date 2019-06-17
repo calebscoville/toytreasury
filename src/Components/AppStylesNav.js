@@ -20,12 +20,13 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 align-items: center;
+
 `
 
 export const AppContainer = styled.div`
   width: 100%;
   height: 7vh;
-  background: #282a36;
+  background: #f2eee0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -44,6 +45,16 @@ export const FormContainer = styled.form`
   justify-content: space-around;
   align-items: center;
 `
+export const Span = styled.span`
+  background: transparent;
+  border-radius: 3px;
+  // border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0 1em;
+  color: #5e0a0a;
+`
+// padding: 0.25em 1em;
+
 // export const Image = styled.div`
 //   width: 95%;
 //   height: 45%;
