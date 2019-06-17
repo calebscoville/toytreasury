@@ -25,7 +25,7 @@ import {
           <Image > <img src={this.props.imageUrl}/> </Image>
         <FormHeader>
           <FormTitle>{this.props.title}</FormTitle>
-          <text>username: {this.props.username}</text>
+          <text>Posted by {this.props.username}</text>
           <text>{this.props.description}</text>
           <text>{this.props.condition}</text>
           <text>{this.props.extra_info}</text>
