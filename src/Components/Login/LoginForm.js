@@ -3,8 +3,20 @@ import axios from 'axios'
 import { withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {updateUser} from './../../redux/userReducer'
+import 'reset-css'
+import {Link} from 'react-router-dom'
 
-class LoginForm extends Component {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn
+  } from '../AppStylesMany';
+
+class LoginForm extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -32,7 +44,9 @@ class LoginForm extends Component {
     }
     render() {
         return (
+            
             <>
+            <AppContainer>
                 <h1>Login</h1>
                 <form onSubmit={this.handleUserLogin}>
                     <input
@@ -51,7 +65,9 @@ class LoginForm extends Component {
                         />
                         <button>Log In</button>
                 </form>
+                </AppContainer>
             </>
+            
         )
     }
 }
