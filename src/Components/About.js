@@ -10,7 +10,7 @@ import {
     FormTitle,
     FormInput,
     FormBtn
-  } from './AppStylesAD';
+  } from './AppStylesMany';
 
   class About extends React.Component {
     render() {

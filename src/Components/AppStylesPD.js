@@ -1,9 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// const Container = styled.div`
-// background-image: `url(${props => props.imgObj.url})`
-// `;
-
 // Animations
 const glow = keyframes`
   50% {
@@ -30,7 +26,7 @@ export const FormContainer = styled.form`
   width: 30%;
   height: 60%;
   background: #c8e6f5;
-  border: 2px solid #5ca0d3;
+  border: 1px solid #5ca0d3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -102,10 +98,11 @@ export const FormInput = styled.input.attrs({
 
 export const FormBtn = styled.button`
   width: 15vw;
-  height: 7vh;
+  height: 8vh;
   background: ${props => props.register ? '#FFD700' : '#FFD700'};
   color: #5e0a0a;
-  border: none;
+  border: line;
+  text-align: left;
   &:hover {
     background: ${props => props.register ? '#f2eee0' : '#f2eee0'};
     cursor: pointer;
@@ -117,7 +114,7 @@ export const EditBtn = styled.button`
   height: 7vh;
   background: ${props => props.register ? '#FFD700' : 'f2eee0'};
   color: #5e0a0a;
-  border: none;
+  border: line;
   &:hover {
     background: ${props => props.register ? 'white' : 'f2eee0'};
     cursor: pointer;

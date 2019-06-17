@@ -3,8 +3,21 @@ import axios from 'axios'
 import { updateToy} from '../../redux/toyReducer'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import 'reset-css'
+import {Link} from 'react-router-dom'
 
-class PostForm extends Component {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn,
+    Input
+  } from '../AppStylesMany';
+
+class PostForm extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -49,8 +62,10 @@ class PostForm extends Component {
     }
     render() {
         return (
+            // <AppContainer>
             <>
                 <h1>Post a Toy</h1>
+                {/* <Input> */}
                 <form onSubmit={this.handleToyPost}>
                     <input
                         type='text'
@@ -94,9 +109,11 @@ class PostForm extends Component {
                         value={this.state.url}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    {/* </Input> */}
                     <button onClick={this.handleToyPost}>Post Toy</button>
                 </form>
             </>
+            // </AppContainer>
         )
     }
 }

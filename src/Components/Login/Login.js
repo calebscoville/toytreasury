@@ -4,8 +4,20 @@ import { updateUser } from '../../redux/userReducer'
 import { connect } from 'react-redux'
 import RegisterForm from './RegisterForm'
 import LoginForm from './LoginForm'
+import 'reset-css'
+import {Link} from 'react-router-dom'
 
-class Login extends Component {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn
+  } from '../AppStylesMany';
+
+class Login extends React.Component {
     componentDidMount() {
         axios.get('/auth/user').then((res) => {
             this.props.updateUser(res.data)
@@ -16,10 +28,12 @@ class Login extends Component {
 
     render() {
         return (
+            <AppContainer>
             <div>
                 <LoginForm />
                 <RegisterForm />
             </div>
+            </AppContainer>
         )
     }
 }

@@ -2,15 +2,30 @@ import React, { Component } from 'react'
 import 'reset-css'
 import axios from 'axios'
 import PostForm from './PostForm'
+// import 'reset-css'
+// import {Link} from 'react-router-dom'
 
-class PostToy extends Component {
+// import {
+//     AppContainer,
+//     FormContainer,
+//     Image,
+//     FormHeader,
+//     FormTitle,
+//     FormInput,
+//     FormBtn
+//   } from '../AppStylesMany';
+
+
+class PostToy extends React.Component {
   
 
   render() {
       return (
+        //   <AppContainer>
           <div>
               <PostForm />
           </div>
+        //   </AppContainer>
       )
   }
 }

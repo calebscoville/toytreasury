@@ -30,7 +30,7 @@ export const FormContainer = styled.form`
   border: 2px solid #5ca0d3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `
 export const Image = styled.div`
@@ -107,6 +107,18 @@ export const FormBtn = styled.button`
     background: ${props => props.register ? '#f2eee0' : '#f2eee0'};
     cursor: pointer;
   }
+`
+
+export const Input = styled.button`
+width: 80%;
+height: 10%;
+background: ${props => props.register ? '#FFD700' : '#FFD700'};
+color: #6272a4;
+border: none;
+&:hover {
+  background: ${props => props.register ? '#f2eee0' : '#f2eee0'};
+  cursor: pointer;
+}
 `
 
 export const ThemeSwitcherBtn = styled.button`

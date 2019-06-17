@@ -14,7 +14,7 @@ const glow = keyframes`
 export const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: #f2eee0;;
+  background: #f2eee0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

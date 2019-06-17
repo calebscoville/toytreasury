@@ -67,19 +67,19 @@ import {
 
       <FormContainer>
         <FormHeader>
-          <FormTitle>What would you like to do right now?</FormTitle>
+          <FormTitle>You've Got Options</FormTitle>
         </FormHeader>
-        <Link to='/posttoy'> <FormBtn register>Post a Toy</FormBtn> </Link>
+        <Link to='/posttoy'> <FormBtn register> 🧪  Post a Toy</FormBtn> </Link>
         <Link to='/browsetoys'>
-          <FormBtn>See All Toys</FormBtn> 
+          <FormBtn> 🔬 See All Toys</FormBtn> 
         </Link>
         
-        <Link to='/donate'> <FormBtn register>Donate to the cause of toys!</FormBtn> </Link>
+        <Link to='/donate'> <FormBtn register> 💸 Donate to the cause!</FormBtn> </Link>
         
         {/* <FormBtn register></FormBtn> */}
-        <FormBtn onClick={this.handleUserLogout}>Logout</FormBtn>
+        <FormBtn onClick={this.handleUserLogout}> 🚪 Logout</FormBtn>
 
-        <FormBtn onClick={this.handleUserDelete} register>Delete My Account</FormBtn>
+        <FormBtn onClick={this.handleUserDelete} register> 🌋  Delete My Account</FormBtn>
 
       </FormContainer>
       </AppContainer>
