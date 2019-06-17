@@ -1,6 +1,8 @@
 module.exports = {
     addtoy: (req, res) => {
-        const {title, description, condition, missingpieces, extrainfo, url} = req.body
+        const {title, description, condition, missingpieces, extrainfo, url, user_id} = req.body
+        
+
         const db = req.app.get('db')
         db.add_toy({
             title,
@@ -8,7 +10,8 @@ module.exports = {
             condition,
             missingpieces,
             extrainfo,
-            url
+            url,
+            user_id
         })
         .then(res.status(200).send('Good job!'))
     },
@@ -16,6 +19,7 @@ module.exports = {
         const db = req.app.get('db');
 
         const toy_info = await db.get_toy_info()
+        delete toy_info.password
         res.status(200).send( toy_info )
         console.log(toy_info)
     },

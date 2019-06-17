@@ -19,23 +19,7 @@ import {
   } from './AppStylesPD';
 
   class PatronDash extends React.Component {
-    // constructor() {
-    //   super()
-    //   this.state={
-    //     user: {}
-    //   }
-    // }
-
-    // componentDidMount = async () => {
-    //   await axios.get(`/auth/details/${this.props.user.user_id}`)
-    //   .then(res => {
-    //     this.setState({
-    //       user: res.data
-    //     })
-    //     console.log(this.state.user)
-    //   })
-    // }
-
+  
     handleUserLogout = () => {
       axios.get('/auth/logout').then((res) => {
         this.props.clearUser()
@@ -44,14 +28,12 @@ import {
       }
 
       handleUserDelete = () => {
-        console.log(this.props)
         axios.delete(`/auth/delete/${this.props.user.user_id}`).then((res) =>{
           this.props.history.push('/')
         })
       }
 
     render() {
-      console.log(this.props)
 
     return (
             

@@ -25,11 +25,13 @@ import {
           <Image > <img src={this.props.imageUrl}/> </Image>
         <FormHeader>
           <FormTitle>{this.props.title}</FormTitle>
+          <text>username: {this.props.username}</text>
           <text>{this.props.description}</text>
           <text>{this.props.condition}</text>
           <text>{this.props.extra_info}</text>
           <text>{this.props.missing_pieces}</text>
           <text>{this.props.url}</text>
+       
         </FormHeader>
         <FormBtn register>See This Toy</FormBtn>
       </FormContainer>

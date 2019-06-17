@@ -43,6 +43,7 @@ import {
             extraInfo={element.extra_info}
             missingPieces={element.missing_pieces}
             imageUrl={element.url}
+            username={element.username}
           />
         )
       })

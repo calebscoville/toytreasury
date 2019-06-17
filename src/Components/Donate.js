@@ -21,7 +21,6 @@ import {
 class Donate extends React.Component {
     onToken = (token) => {
       token.card = void 0;
-      console.log('token', token);
       axios.post('http://localhost:3456/api/payment', { token, amount: 1000 } ).then(response => {
         alert('we are in business')
       });

@@ -37,9 +37,11 @@ class PostForm extends React.Component {
             condition: this.state.condition,
             missingpieces: parseInt(this.state.missingpieces),
             extrainfo: this.state.extrainfo,
-            url: this.state.url
+            url: this.state.url,
+            user_id: this.props.user.user_id
             }
         axios.post('/api/toy', toyobj).then((res) => {
+            console.log(toyobj)
             this.props.history.push('/browsetoys')
             this.props.updateToy(res.data)
         })
@@ -61,6 +63,7 @@ class PostForm extends React.Component {
         })
     }
     render() {
+        console.log(this.props.user)
         return (
             // <AppContainer>
             <>

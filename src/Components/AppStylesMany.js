@@ -29,8 +29,8 @@ export const FormContainer = styled.form`
   background: #c8e6f5;
   border: 2px solid #5ca0d3;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 `
 export const Image = styled.div`

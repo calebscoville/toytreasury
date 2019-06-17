@@ -31,7 +31,7 @@ class EditUser extends Component {
             password: this.state.password
             }
         axios.put(`/auth/edit/${this.props.user.user_id}`, editobj).then((res) => {
-            console.log(res.data)
+
             this.props.updateUser(res.data[0])
             this.props.history.push('/patrondash')
               
