@@ -32,6 +32,8 @@ export const FormContainer = styled.form`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  // margin: 10%;
+  padding: 20px;
 `
 export const Image = styled.div`
   width: 95%;
@@ -127,4 +129,8 @@ export const ThemeSwitcherBtn = styled.button`
   background: ${props => props.register ? 'pink' : 'aquamarine'};
   color: white;
   border: none;
+`
+
+export const Text = styled.text`
+
 `

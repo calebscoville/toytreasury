@@ -36,7 +36,7 @@ export const FormContainer = styled.form`
 export const Image = styled.div`
   width: 95%;
   height: 45%;
-  background: orange;
+  background: transparent;
   display: flex;
   color: black;
   font-family: bold;
@@ -66,8 +66,9 @@ export const FormHeader = styled.div`
 `
 
 export const FormTitle = styled.h1`
-  font-size: 24px;
-  color: #50fa7b;
+  font-size: 15px;
+  font-weight: bold;
+  color: #5e0a0a;
 `
 export const FormInput = styled.input.attrs({
     placeholder: props => props.title ? 'Title' : 'Description',

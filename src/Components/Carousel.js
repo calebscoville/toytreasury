@@ -9,24 +9,24 @@ class Carousel1 extends Component {
         return (
             <Carousel stopOnHove={true} interval={3000} transitionTime={700} showStatus={false} showThumbs={false} showArrows={true} dynamicHeight={true} autoPlay infiniteLoop>
                 <div>
-                    <img height="300px" src="https://www.tozore.com/images/tozore/k/syl12785.jpg" />
-                    <p className="legend">Criss Cross Crash</p>
+                    <img height="200px" src="https://images.unsplash.com/photo-1508896694512-1eade558679c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+                    <p className="legend">Red Volkswagon</p>
                 </div>
                 <div>
-                    <img height="300px" src="https://pagebean-pagebean.netdna-ssl.com/sciplus/productImages/Regular/63830.jpg" />
-                    <p className="legend">Toy Robot Kit</p>
+                    <img height="200px" src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+                    <p className="legend">Learning Toys</p>
                 </div>
                 <div>
-                    <img height="300px" src="https://images.crateandbarrel.com/is/image/Crate/FirestationHLSHF18/?$web_product_hero$&180807131336&wid=625&hei=625" />
-                    <p className="legend">Firehouse Playset</p>
+                    <img height="200px" src="https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" />
+                    <p className="legend">Legos (Assorted)</p>
                 </div>
                 <div>
-                    <img height="300px" src="https://li4.rightinthebox.com/images/384x384/201811/bmscfx1541406400701.jpg" />
-                    <p className="legend">Magnetic Balls</p>
+                    <img height="200px" src="https://images.unsplash.com/photo-1550432163-9cb326104944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+                    <p className="legend">WALL-E Robot</p>
                 </div>
                 <div>
-                    <img height="300px" src="https://media3.s-nbcnews.com/j/newscms/2018_42/1377791/41vkuzhlhrl_7ac8fe2098fb5192b4f9194c6279a433.fit-720w.jpg" />
-                    <p className="legend">Hey Clay</p>
+                    <img height="200px" src="https://images.unsplash.com/photo-1558877385-6fc9b25e3adf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1119&q=80" />
+                    <p className="legend">Train Set (Small)</p>
                 </div>
             </Carousel>
         );

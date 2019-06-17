@@ -23,8 +23,8 @@ align-items: center;
 `
 
 export const AppContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 7vh;
   background: #282a36;
   display: flex;
   flex-direction: row;

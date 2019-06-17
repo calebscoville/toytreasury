@@ -5,12 +5,14 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import {
-    nav
+    nav,
+    AppContainer,
+    FormContainer
   } from './AppStylesNav';
 
 const Navbar = ({ username }) => {
     return (
-        // <AppContainer>
+        <AppContainer>
         <div>
             <Link to='/'> Home </Link>
             <Link to='/login'> Login/Sign Up </Link>
@@ -21,11 +23,11 @@ const Navbar = ({ username }) => {
             {/* <Link to='/admindash'> AdminDash </Link> */}
             <Link to='/browsetoys'> Browse All Toys</Link>
             <Link to='/posttoy'> Post Toy </Link>
-            <Link to='/toyinfo'> Toy Info </Link>
-            <Link to='/details'> Details </Link>
+            {/* <Link to='/toyinfo'> Toy Info </Link> */}
+            {/* <Link to='/details'> Details </Link> */}
             <span>{username && username}</span>
         </div>
-        // </AppContainer>
+        </AppContainer>
     )
 }
 
