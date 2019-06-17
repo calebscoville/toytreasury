@@ -30,7 +30,7 @@ export const FormContainer = styled.form`
   border: 2px solid #5ca0d3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   // align-content: space-between;
   margin: 5%;
@@ -132,6 +132,8 @@ export const ThemeSwitcherBtn = styled.button`
   border: none;
 `
 
-export const Text = styled.text`
-
+export const Title = styled.text`
+font-size: 45px;
+margin: 5px;
+font-family: cursive;
 `
