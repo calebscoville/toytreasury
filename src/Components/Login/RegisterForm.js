@@ -25,14 +25,15 @@ class RegisterForm extends React.Component {
             firstname: '',
             lastname: '',
             email: '',
-            city: ''
+            city: '',
+            image: '',
         }
     }
     handleUserRegister = async (e) => {
         e.preventDefault()
-        const { firstname, lastname, email, username, password, city } = this.state
+        const { firstname, lastname, email, username, password, city, image } = this.state
         await axios
-            .post('/auth/register', { firstname, lastname, email, username, password, city })
+            .post('/auth/register', { firstname, lastname, email, username, password, city, image })
             .then((res) => {
                 this.props.updateUser(res.data)
                 this.props.history.push('/patrondash')
@@ -51,7 +52,8 @@ class RegisterForm extends React.Component {
             firstname: '',
             lastname: '',
             email: '',
-            city: ''
+            city: '',
+            image: ''
         })
     }
 
@@ -120,6 +122,15 @@ class RegisterForm extends React.Component {
                         onChange={this.handleRegisterInfoUpdate}
                     />
                         </li>
+                        <li>
+                        <input
+                        type='text'
+                        placeholder='image'
+                        name='image'
+                        value={this.state.image}
+                        onChange={this.handleRegisterInfoUpdate}
+                    />
+                    </li>
                         <li>
                     <button onClick={this.handleUserRegister}>Register</button>
                     </li>

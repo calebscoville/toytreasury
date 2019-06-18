@@ -38,7 +38,7 @@ import {
       }
 
     render() {
-
+      console.log(this.props.user)
     return (
             
     <AppContainer>

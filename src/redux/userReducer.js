@@ -5,7 +5,8 @@ const initialState = {
     email: '',
     password: '',
     city: '',
-    user_id: null
+    user_id: null,
+    image: ''
 }
 
 const UPDATE_USER = 'UPDATE_USER'
@@ -28,8 +29,8 @@ function reducer(state = initialState, action){
     switch (action.type){
         case UPDATE_USER:
             // console.log(action.payload)
-            const { username, first_name, last_name, email, city, user_id } = action.payload
-            return { username, first_name, last_name, email, city, user_id }
+            const { username, first_name, last_name, email, city, user_id, image } = action.payload
+            return { username, first_name, last_name, email, city, user_id, image }
             case CLEAR_USER:
                 return { ...initialState }
                 default:

@@ -23,6 +23,7 @@ import {
       <FormContainer2>
         <body className="image"></body>
         <FormHeader>
+          <img src={this.props.user.image} alt="photo of user" />
         <text>{this.props.user.first_name}</text>
         <text>{this.props.user.last_name}</text>
           {/* <text></text> */}

@@ -14,7 +14,8 @@ import {
     FormTitle,
     FormInput,
     FormBtn,
-    Input
+    Input,
+    Title
   } from '../AppStylesMany';
 
 class PostForm extends React.Component {
@@ -63,13 +64,16 @@ class PostForm extends React.Component {
         })
     }
     render() {
-        console.log(this.props.user)
+        // console.log(this.props.user)
         return (
-            <FormContainer>
+            <AppContainer>
+                <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>Post a Toy</Title>
+            <FormContainer style={{ height: '150px', width: '115px',  margin: 10, padding: '10px'}}>
             <>
-                <h1>Post a Toy</h1>
                 {/* <Input> */}
                 <form onSubmit={this.handleToyPost}>
+                    <ul>
+                        <li>
                     <input
                         type='text'
                         placeholder='title'
@@ -77,6 +81,8 @@ class PostForm extends React.Component {
                         value={this.state.title}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='description'
@@ -84,6 +90,8 @@ class PostForm extends React.Component {
                         value={this.state.description}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='condition'
@@ -91,6 +99,8 @@ class PostForm extends React.Component {
                         value={this.state.condition}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='missing pieces'
@@ -98,6 +108,8 @@ class PostForm extends React.Component {
                         value={this.state.missingpieces}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='extra information'
@@ -105,6 +117,8 @@ class PostForm extends React.Component {
                         value={this.state.extrainfo}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='url'
@@ -112,11 +126,16 @@ class PostForm extends React.Component {
                         value={this.state.url}
                         onChange={this.handlePostFormInfoUpdate}
                     />
+                    </li>
+                    <li>
                     {/* </Input> */}
                     <button onClick={this.handleToyPost}>Post Toy</button>
+                    </li>
+                    </ul>
                 </form>
             </>
             </FormContainer>
+            </AppContainer>
         )
     }
 }
