@@ -5,7 +5,7 @@ import "./patronDisplay.css"
 
 import {
     AppContainer,
-    FormContainer,
+    FormContainer2,
     Image,
     FormHeader,
     FormTitle,
@@ -20,11 +20,11 @@ import {
     return (
 
       
-      <FormContainer>
+      <FormContainer2>
         <body className="image"></body>
         <FormHeader>
-          <FormTitle>{this.props.user.first_name}</FormTitle>
-          <text>{this.props.user.last_name}</text>
+        <text>{this.props.user.last_name} {this.props.user.first_name} </text>
+          {/* <text></text> */}
           <text>{this.props.user.username}</text>
           <text>{this.props.user.city}</text>
           <text>{this.props.user.email}</text>
@@ -34,7 +34,7 @@ import {
         <EditBtn register>Edit</EditBtn>
         </Link>
       
-      </FormContainer>
+      </FormContainer2>
   
       
   

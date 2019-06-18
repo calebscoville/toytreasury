@@ -30,20 +30,25 @@ class Donate extends React.Component {
     render() {
       return (
         <AppContainer>
-          <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>Donate to the Cause of Toys!</Title>
-        <div>
-        <FormContainer>
-         <text>
-             Although we are funded by the state, and I'm a multi-billionaire (just kidding, but maybe some day...to both of those things) we are always trying to buy the best toys and fix the old ones. Every donation is greatly appreciated, sincerely welcomed and graciously recognized. From $0.25 to $9,000,000, we'll take it. Thanks.
-        </text>     
-        </FormContainer> 
+          <Title style={{ textDecoration: 'none', color: '#5e0a0a', padding: "20px" }}>Donate to the Cause of Toys!</Title>
+          <div>
           <StripeCheckout
-            label="Make a child the happiest child ever by donating $10 at least 100 times"
+            name="❤️ We love you ❤️"
+            description="Thanks for helping the kids."
+            image="https://images.pexels.com/photos/1857068/pexels-photo-1857068.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            panelLabel="Donate "
+            label="Click here to make a child happy!"
             token={this.onToken}
             stripeKey={ "pk_test_7zAPpxGG6xwTkDTO55KcZMA4000vP1oDan" }
             amount={1000}
           />
-        </div>
+          </div>
+        <FormContainer>
+         {/* <text> */}
+             We are always trying to buy the best toys and fix the old ones. Every donation is greatly appreciated, sincerely welcomed and graciously recognized. From $0.25 to $9,000,000, we'll take it. Thanks.
+        {/* </text>      */}
+        </FormContainer> 
+          
         </AppContainer>
       );
     }

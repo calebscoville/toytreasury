@@ -24,7 +24,7 @@ export const AppContainer = styled.div`
 `
 export const Title = styled.text`
 font-size: 45px;
-margin: 10px;
+margin: 5px;
 font-family: cursive;
 `
 
@@ -35,15 +35,15 @@ export const FormWrapper = styled.div`
 `
 
 export const FormContainer = styled.form`
-  width: 30%;
-  height: 60%;
+  width: 80%;
+  height: 30%;
   background: #c8e6f5;
   border: 2px solid #5ca0d3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  // align-content: space-between;
+  align-content: space-between;
   margin: 5%;
   padding: 30px;
 `

@@ -22,10 +22,8 @@ const Navbar = ({ username }) => {
             <Span><Link to='/patrondash' style={{ textDecoration: 'none', color: '#5e0a0a'  }}>🎛Dashboard</Link></Span>
             <Span><Link to='/howitworks' style={{ textDecoration: 'none', color: '#5e0a0a'  }}>🛠How It Works</Link></Span>
             <Span><Link to='/about' style={{ textDecoration: 'none', color: '#5e0a0a'  }}>ℹ️About</Link></Span>
-            <Span><Link to='/donate' style={{ textDecoration: 'none', color: '#5e0a0a'  }}>💸Donate</Link></Span>
-            
-            
-            
+            <Span><Link to='/donate' style={{ textDecoration: 'none', color: '#5e0a0a'  }}>💰Donate</Link></Span>
+                      
             <span>{username && username}</span>
         {/* </div> */}
         </AppContainer>

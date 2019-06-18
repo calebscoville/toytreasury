@@ -52,6 +52,7 @@ export const Span = styled.span`
   color: #c8e6f5;
   margin: 0 0.75em;
   color: #5e0a0a;
+  padding: 2px;
 `
 // padding: 0.25em 1em;
 

@@ -8,7 +8,9 @@ import { connect } from 'react-redux'
 
 import {
     AppContainer,
-    FormContainer,
+    // FormContainer,
+    FormContainer2,
+    FormContainer3,
     Image,
     Image2,
     FormHeader,
@@ -39,15 +41,13 @@ import {
             
     <AppContainer>
 
-      <FormContainer>
-      <PatronDisplay 
-        user={this.props.user}
-          />
-      </FormContainer>
+      {/* <FormContainer2> */}
+      <PatronDisplay user={this.props.user} />
+      {/* </FormContainer2> */}
 
       
 
-      <FormContainer>
+      <FormContainer3>
         <FormHeader>
           <FormTitle>You've Got Options</FormTitle>
         </FormHeader>
@@ -56,14 +56,14 @@ import {
           <FormBtn> 🔬 See All Toys</FormBtn> 
         </Link>
         
-        <Link to='/donate'> <FormBtn register> 💸 Donate to the cause!</FormBtn> </Link>
+        <Link to='/donate'> <FormBtn register> 💰 Donate!</FormBtn> </Link>
         
         {/* <FormBtn register></FormBtn> */}
         <FormBtn onClick={this.handleUserLogout}> 🚪 Logout</FormBtn>
 
         <FormBtn onClick={this.handleUserDelete} register> 🌋  Delete My Account</FormBtn>
 
-      </FormContainer>
+      </FormContainer3>
       </AppContainer>
   
       
