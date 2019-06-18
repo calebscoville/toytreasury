@@ -31,7 +31,7 @@ module.exports = {
         if(!userFound[0]) return res.status(401).send('Email does not exist')
         const authenticated = bcrypt.compareSync(password, userFound[0].password)
         if (authenticated) {
-            session.user = {user_id: userFound[0].user_id, username: userFound[0].username, image: userFound[0].image, firs_tname: userFound[0].first_name, last_name: userFound[0].last_name, email: userFound[0].email, city: userFound[0].city}
+            session.user = {user_id: userFound[0].user_id, username: userFound[0].username, image: userFound[0].image, first_name: userFound[0].first_name, last_name: userFound[0].last_name, email: userFound[0].email, city: userFound[0].city}
             res.status(200).send(session.user)
         } else {
             return res.status(401).send('Incorrect username or password')

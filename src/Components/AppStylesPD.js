@@ -79,7 +79,7 @@ export const FormContainer3 = styled.form`
 
 export const FormHeader = styled.div`
   width: 80%;
-  height: 10%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

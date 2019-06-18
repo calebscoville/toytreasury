@@ -23,7 +23,8 @@ import {
       <FormContainer2>
         <body className="image"></body>
         <FormHeader>
-        <text>{this.props.user.last_name} {this.props.user.first_name} </text>
+        <text>{this.props.user.first_name}</text>
+        <text>{this.props.user.last_name}</text>
           {/* <text></text> */}
           <text>{this.props.user.username}</text>
           <text>{this.props.user.city}</text>
