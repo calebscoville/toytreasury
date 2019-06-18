@@ -71,7 +71,7 @@ class EditUser extends React.Component {
             <>
             <AppContainer>
             <Title style={{ textDecoration: 'none', color: '#5e0a0a', padding: "20px" }}>Edit Your Profile</Title>
-                <FormContainer style={{ width: '70px'}}>
+                <FormContainer style={{ width: '115px', padding: '5px'}}>
                 
                 <form onSubmit={this.handleEditUser}>
                 {/* <input
@@ -133,6 +133,15 @@ class EditUser extends React.Component {
                         placeholder='password'
                         name='password'
                         value={this.state.password}
+                        onChange={this.handleEditUserInfoUpdate}
+                    />
+                    </li>
+                    <li>
+                    <input
+                        type='text'
+                        placeholder='image'
+                        name='image'
+                        value={this.state.image}
                         onChange={this.handleEditUserInfoUpdate}
                     />
                     </li>
