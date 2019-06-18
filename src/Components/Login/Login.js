@@ -15,7 +15,8 @@ import {
     FormTitle,
     FormInput,
     FormBtn,
-    Title
+    Title,
+    FormWrapper
   } from '../AppStylesMany';
 
 class Login extends React.Component {
@@ -30,11 +31,12 @@ class Login extends React.Component {
     render() {
         return (
             <AppContainer>
-                <div>
+               
                 <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>The Toy Treasury</Title>
-                </div>
+                <FormWrapper>
                 <LoginForm />
                 <RegisterForm />
+                </FormWrapper>
             </AppContainer>
         )
     }

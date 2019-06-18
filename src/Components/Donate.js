@@ -14,7 +14,8 @@ import {
     FormHeader,
     FormTitle,
     FormInput,
-    FormBtn
+    FormBtn,
+    Title
   } from './AppStylesMany';
 
 
@@ -29,8 +30,8 @@ class Donate extends React.Component {
     render() {
       return (
         <AppContainer>
+          <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>Donate to the Cause of Toys!</Title>
         <div>
-        <h1>Donate</h1>
         <FormContainer>
          <text>
              Although we are funded by the state, and I'm a multi-billionaire (just kidding, but maybe some day...to both of those things) we are always trying to buy the best toys and fix the old ones. Every donation is greatly appreciated, sincerely welcomed and graciously recognized. From $0.25 to $9,000,000, we'll take it. Thanks.

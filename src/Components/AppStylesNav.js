@@ -11,46 +11,46 @@ const glow = keyframes`
 `
 
 // Styled Components
-export const nav = styled.div`
-width: 10vw;
-height: 10vh;
-background: #282a36;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-align-items: center;
+// export const nav = styled.div`
+// width: 10vw;
+// height: 10vh;
+// background: #282a36;
+// display: flex;
+// flex-direction: row;
+// flex-wrap: wrap;
+// justify-content: space-around;
+// align-items: center;
 
-`
+// `
 
 export const AppContainer = styled.div`
   width: 100%;
-  height: 7vh;
+  height: 5vh;
   background: #f2eee0;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 
-export const FormContainer = styled.form`
-  width: 30%;
-  height: 60%;
-  background: #44475a;
-  border: 2px solid #6272a4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-`
+// export const FormContainer = styled.form`
+//   width: 30%;
+//   height: 60%;
+//   background: #44475a;
+//   border: 2px solid #6272a4;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// `
 export const Span = styled.span`
-  background: transparent;
+  background: #c8e6f5;
   border-radius: 3px;
-  // border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
+  border: 1px solid #5ca0d3;
+  color: #c8e6f5;
+  margin: 0 0.75em;
   color: #5e0a0a;
 `
 // padding: 0.25em 1em;

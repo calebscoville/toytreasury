@@ -35,7 +35,7 @@ width: 90vw;
 
 export const Title = styled.text`
 font-size: 45px;
-margin: 5px;
+margin: 10px;
 font-family: cursive;
 `
 

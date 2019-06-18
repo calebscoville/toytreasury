@@ -65,7 +65,7 @@ class RegisterForm extends React.Component {
             <>
             {/* <AppContainer> */}
                 <FormContainer>
-                <h1>Sign Up</h1>
+                {/* <h1>Sign Up</h1> */}
                 <form onSubmit={this.handleUserRegister}>
                     <input
                         type='text'

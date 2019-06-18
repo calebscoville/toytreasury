@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
             <>
             {/* <AppContainer> */}
                 <FormContainer>
-                <h1>Login</h1>
+                {/* <h1>Login</h1> */}
                 <form onSubmit={this.handleUserLogin}>
                     <input
                         type='text'
