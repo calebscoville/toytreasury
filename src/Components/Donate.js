@@ -35,7 +35,7 @@ class Donate extends React.Component {
           <StripeCheckout
             name="❤️ We love you ❤️"
             description="Thanks for helping the kids."
-            image="https://images.pexels.com/photos/1857068/pexels-photo-1857068.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            image="https://images.pexels.com/photos/2026960/pexels-photo-2026960.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             panelLabel="Donate "
             label="Click here to make a child happy!"
             token={this.onToken}

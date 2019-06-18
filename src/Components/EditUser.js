@@ -5,8 +5,20 @@ import axios from 'axios'
 import { updateUser} from '../redux/userReducer'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import 'reset-css'
 
-class EditUser extends Component {
+import {
+    AppContainer,
+    FormContainer,
+    Image,
+    FormHeader,
+    FormTitle,
+    FormInput,
+    FormBtn,
+    Title
+  } from './AppStylesMany';
+
+class EditUser extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -57,15 +69,20 @@ class EditUser extends Component {
     render() {
         return (
             <>
-                <h1>Edit Your Profile</h1>
+            <AppContainer>
+            <Title style={{ textDecoration: 'none', color: '#5e0a0a', padding: "20px" }}>Edit Your Profile</Title>
+                <FormContainer style={{ width: '70px'}}>
+                
                 <form onSubmit={this.handleEditUser}>
-                <input
+                {/* <input
                         type='img'
                         placeholder='image'
                         name='image'
                         value={this.state.image}
                         onChange={this.handleEditUserInfoUpdate}
-                    />
+                    /> */}
+                    <ul>
+                        <li>
                     <input
                         type='text'
                         placeholder='first name'
@@ -73,6 +90,8 @@ class EditUser extends Component {
                         value={this.state.firstname}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='last name'
@@ -80,6 +99,8 @@ class EditUser extends Component {
                         value={this.state.lastname}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='email'
@@ -87,6 +108,8 @@ class EditUser extends Component {
                         value={this.state.email}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='username'
@@ -94,6 +117,8 @@ class EditUser extends Component {
                         value={this.state.username}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='text'
                         placeholder='city'
@@ -101,6 +126,8 @@ class EditUser extends Component {
                         value={this.state.city}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <input
                         type='password'
                         placeholder='password'
@@ -108,8 +135,14 @@ class EditUser extends Component {
                         value={this.state.password}
                         onChange={this.handleEditUserInfoUpdate}
                     />
+                    </li>
+                    <li>
                     <button onClick={this.handleEditUser}>Confirm Edit</button>
+                    </li>
+                    </ul>
                 </form>
+                </FormContainer>
+                </AppContainer>
             </>
         )
     }

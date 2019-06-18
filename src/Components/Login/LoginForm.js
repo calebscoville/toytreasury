@@ -50,21 +50,23 @@ class LoginForm extends React.Component {
                 <FormContainer>
                 {/* <h1>Login</h1> */}
                 <form onSubmit={this.handleUserLogin}>
-                    <input
+                    <ul>
+                    <li><input
                         type='text'
                         name='username'
                         placeholder='username'
                         value={this.state.username}
                         onChange={this.handleLoginInfoUpdate}
-                        />
-                    <input
+                        /></li>
+                    <li><input
                         type='password'
                         name='password'
                         placeholder='password'
                         value={this.state.password}
                         onChange={this.handleLoginInfoUpdate}
-                        />
-                        <button>Log In</button>
+                        /></li>
+                        <li><button>Log In</button></li>
+                        </ul>
                 </form>
                 </FormContainer>
                 {/* </AppContainer> */}
