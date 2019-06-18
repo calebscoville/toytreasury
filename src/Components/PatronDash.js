@@ -17,7 +17,9 @@ import {
     FormTitle,
     FormInput,
     FormBtn,
-    EditBtn
+    EditBtn,
+    Title,
+    FormWrapper
   } from './AppStylesPD';
 
   class PatronDash extends React.Component {
@@ -41,29 +43,26 @@ import {
             
     <AppContainer>
 
-      {/* <FormContainer2> */}
+{/* <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>Your Profile</Title> */}
+
       <PatronDisplay user={this.props.user} />
-      {/* </FormContainer2> */}
 
       
 
       <FormContainer3>
+
         <FormHeader>
           <FormTitle>You've Got Options</FormTitle>
         </FormHeader>
-        <Link to='/posttoy'> <FormBtn register> 🧪  Post a Toy</FormBtn> </Link>
-        <Link to='/browsetoys'>
-          <FormBtn> 🔬 See All Toys</FormBtn> 
-        </Link>
-        
-        <Link to='/donate'> <FormBtn register> 💰 Donate!</FormBtn> </Link>
-        
-        {/* <FormBtn register></FormBtn> */}
-        <FormBtn onClick={this.handleUserLogout}> 🚪 Logout</FormBtn>
 
-        <FormBtn onClick={this.handleUserDelete} register> 🌋  Delete My Account</FormBtn>
+        <Link to='/posttoy'><FormBtn register> 🧪  Post a Toy</FormBtn> </Link>
+        <Link to='/browsetoys'><FormBtn> 🔬 See All Toys</FormBtn> </Link>
+        <Link to='/donate'> <FormBtn register> 💰 Donate!</FormBtn> </Link>
+        <FormBtn onClick={this.handleUserLogout}> 🚪 Logout</FormBtn>
+        <FormBtn onClick={this.handleUserDelete} style={{ backgroundColor: 'violet' }}> 🌋  Delete My Account</FormBtn>
 
       </FormContainer3>
+
       </AppContainer>
   
       

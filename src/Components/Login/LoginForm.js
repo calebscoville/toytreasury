@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
         return (
             
             <>
-                <FormContainer style={{ height: '90px'}}>
+                <FormContainer style={{ width: '115px', height: '150px', margin: 20, padding: '10px' }}>
                 <form onSubmit={this.handleUserLogin}>
                     <ul>
                     <li><input

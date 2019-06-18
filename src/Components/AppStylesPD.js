@@ -34,7 +34,7 @@ export const AppContainer = styled.div`
 //   align-items: center;
 // `
 export const FormContainer2 = styled.form`
-  width: 30%;
+  width: 25%;
   height: 60%;
   background: #c8e6f5;
   border: 1px solid #5ca0d3;
@@ -42,16 +42,18 @@ export const FormContainer2 = styled.form`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
 `
 export const FormContainer3 = styled.form`
-  width: 30%;
+  width: 25%;
   height: 60%;
   background: #c8e6f5;
   border: 1px solid #5ca0d3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
   `
 
 // export const Image = styled.div`
@@ -84,6 +86,16 @@ export const FormHeader = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+`
+export const Title = styled.text`
+font-size: 45px;
+margin: 5px;
+font-family: cursive;
+`
+export const FormWrapper = styled.div`
+  display: flex;
+  
+
 `
 
 export const FormTitle = styled.h1`

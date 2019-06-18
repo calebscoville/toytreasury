@@ -63,9 +63,7 @@ class RegisterForm extends React.Component {
     render() {
         return (
             <>
-            {/* <AppContainer> */}
-                <FormContainer style={{ height: '90px'}}>
-                {/* <h1>Sign Up</h1> */}
+                <FormContainer style={{ width: '115px', height: '150px', margin: 20, padding: '10px' }}>
                 <form onSubmit={this.handleUserRegister}>
                     <ul>
                         <li>

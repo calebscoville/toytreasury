@@ -20,32 +20,25 @@ import {
         <AppContainer>
           <Title style={{ textDecoration: 'none', color: '#5e0a0a' }}>How It Works</Title>
         <div>
-            <FormContainer>
-            {/* <text> */}
+            <FormContainer style={{ marginLeft: 85 }}>
            <Paragraph>
             <h1>Dear Wonderful Patron, here's how it works:</h1>
+            <br /> 
             <ul>
-              <li>Step 1: Go to "Browse Toys" and find a toy you'd like to check out from the library. </li>
+              <li>Step 1: Go to "Browse Toys" and find a toy you'd like to check out from the library.</li>
+              <br /> 
               <li>Step 2: Follow the instructions for checkout.</li>
+              <br /> 
               <li>Step 3: Pick up your toy and play with it to your heart's content.</li>
+              <br /> 
               <li>Step 4: Return the toy within 14 days of checkout.</li>
+              <br /> 
               <li>Step 5: Check out a new toy and REPEAT!</li>
+              <br /> 
               <li>*If there are any missing pieces or damage to the game, then you will be fined the cost of the piece and time for the repair. (But all can be forgiven with a nice donation.)</li>
             
             </ul>
             </Paragraph>
-            
-           
-            
-
-            
-
-            
-
-            
-
-            
-            {/* </text> */}
             </FormContainer>
         </div>
         </AppContainer>

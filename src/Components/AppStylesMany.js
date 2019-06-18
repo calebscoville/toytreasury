@@ -37,23 +37,19 @@ export const FormWrapper = styled.div`
 export const Paragraph = styled.text`
   font-size: 17px;
   margin: 0px;
-  padding: 2px;
+  padding: 20px;
   
 
 `
 
 export const FormContainer = styled.form`
-  width: 80%;
-  height: 30%;
+  width : 80%;
+  // height: 30%;
   background: #c8e6f5;
   border: 2px solid #5ca0d3;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-between;
-  margin: 5%;
-  padding: 30px;
+  // flex-direction: column;
+  align-ite /ms: center;
 `
 export const Image = styled.div`
   width: 95%;
