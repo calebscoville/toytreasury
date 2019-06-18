@@ -48,9 +48,9 @@ export const AppContainer = styled.div`
 export const Span = styled.span`
   background: #c8e6f5;
   border-radius: 3px;
-  border: 1px solid #5ca0d3;
+  border: 1px solid #5e0a0a;
   color: #c8e6f5;
-  margin: 0 0.75em;
+  margin: 1px 0 0 0.5em;
   color: #5e0a0a;
   padding: 2px;
 `

@@ -12,8 +12,8 @@ const app = express()
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env
 
 app.use(bodyParser.json());
-app.use(cors())
-
+app.use(cors());
+app.use( express.static( `${__dirname}/../build` ) );
 
 
 app.use(express.json())
