@@ -34,6 +34,14 @@ export const FormWrapper = styled.div`
 
 `
 
+export const Paragraph = styled.text`
+  font-size: 17px;
+  margin: 0px;
+  padding: 2px;
+  
+
+`
+
 export const FormContainer = styled.form`
   width: 80%;
   height: 30%;
