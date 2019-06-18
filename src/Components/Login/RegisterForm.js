@@ -64,9 +64,11 @@ class RegisterForm extends React.Component {
         return (
             <>
             {/* <AppContainer> */}
-                <FormContainer>
+                <FormContainer style={{ height: '90px'}}>
                 {/* <h1>Sign Up</h1> */}
                 <form onSubmit={this.handleUserRegister}>
+                    <ul>
+                        <li>
                     <input
                         type='text'
                         placeholder='first name'
@@ -74,6 +76,8 @@ class RegisterForm extends React.Component {
                         value={this.state.firstname}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <input
                         type='text'
                         placeholder='last name'
@@ -81,6 +85,8 @@ class RegisterForm extends React.Component {
                         value={this.state.lastname}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <input
                         type='text'
                         placeholder='email'
@@ -88,6 +94,8 @@ class RegisterForm extends React.Component {
                         value={this.state.email}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <input
                         type='text'
                         placeholder='username'
@@ -95,6 +103,8 @@ class RegisterForm extends React.Component {
                         value={this.state.username}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <input
                         type='password'
                         placeholder='password'
@@ -102,6 +112,8 @@ class RegisterForm extends React.Component {
                         value={this.state.password}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <input
                         type='text'
                         placeholder='city'
@@ -109,7 +121,11 @@ class RegisterForm extends React.Component {
                         value={this.state.city}
                         onChange={this.handleRegisterInfoUpdate}
                     />
+                        </li>
+                        <li>
                     <button onClick={this.handleUserRegister}>Register</button>
+                    </li>
+                    </ul>
                 </form>
                 </FormContainer>
                 {/* </AppContainer> */}

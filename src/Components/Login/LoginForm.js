@@ -46,9 +46,7 @@ class LoginForm extends React.Component {
         return (
             
             <>
-            {/* <AppContainer> */}
-                <FormContainer>
-                {/* <h1>Login</h1> */}
+                <FormContainer style={{ height: '90px'}}>
                 <form onSubmit={this.handleUserLogin}>
                     <ul>
                     <li><input
@@ -58,6 +56,8 @@ class LoginForm extends React.Component {
                         value={this.state.username}
                         onChange={this.handleLoginInfoUpdate}
                         /></li>
+                        
+                        
                     <li><input
                         type='password'
                         name='password'

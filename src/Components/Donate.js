@@ -43,7 +43,7 @@ class Donate extends React.Component {
             amount={1000}
           />
           </div>
-        <FormContainer>
+        <FormContainer style={{ height: '70px'}}>
          {/* <text> */}
              We are always trying to buy the best toys and fix the old ones. Every donation is greatly appreciated, sincerely welcomed and graciously recognized. From $0.25 to $9,000,000, we'll take it. Thanks.
         {/* </text>      */}
