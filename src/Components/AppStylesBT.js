@@ -25,7 +25,7 @@ export const AppContainer = styled.div`
 
 export const FormContainer = styled.form`
   width: 30%;
-  height: 60%;
+  height: 70%;
   background: #c8e6f5;
   border: 2px solid #5ca0d3;
   display: flex;
