@@ -35,7 +35,7 @@ import {
               <br /> 
               <li>Step 5: Check out a new toy and REPEAT!</li>
               <br /> 
-              <li>*If there are any missing pieces or damage to the game, then you will be fined the cost of the piece and time for the repair. (But all can be forgiven with a nice donation.)</li>
+              <li>*If there are any missing pieces or damage to the toy(s), then you will be fined the cost of the replacement and time for the repair. (But all can be forgiven with a nice donation.)</li>
             
             </ul>
             </Paragraph>

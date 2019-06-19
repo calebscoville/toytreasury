@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 class Carousel1 extends Component {
     render() {
         return (
-            <Carousel stopOnHove={true} interval={3000} transitionTime={700} showStatus={false} showThumbs={false} showArrows={true} dynamicHeight={true} autoPlay infiniteLoop>
+            <Carousel stopOnHove={true} interval={2750} transitionTime={1000} showStatus={false} showThumbs={false} showArrows={true} dynamicHeight={true} autoPlay infiniteLoop>
                 <div>
                     <img height="200px" src="https://images.unsplash.com/photo-1508896694512-1eade558679c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
                     <p className="legend">Red Volkswagon</p>
